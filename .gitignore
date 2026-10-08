@@ -1,5 +1,15 @@
-node_modules
-dist
-dist-single
+node_modules/
+dist/
+dist-single/
 *.tsbuildinfo
-.vercel
+.DS_Store
+.env
+.env.*
+# Raw downloads are large and can be re-fetched. Manifests and processed outputs are kept.
+data/raw/*
+!data/raw/power/
+!data/raw/icrisat/
+data/raw/power/*
+data/raw/icrisat/*
+!data/raw/power/.gitkeep
+!data/raw/icrisat/.gitkeep

@@ -12,7 +12,9 @@ HarvestShield transforms El Niño climate signals into localized agricultural an
 | District rainfall & temperature, 1 Jun → latest | **Real** after you run `npm run fetch:climate` (NASA POWER vs 2001–2020 normals) |
 | Analog years (1997, 2009, 2015, 2023) | **Real** ONI trajectories, similarity computed from data |
 | Crop mix, reservoir storage, population, vulnerability | Illustrative (labelled in the app) |
-| Risk weights | Hand-set, transparent; **not validated** against harvest records |
+| Risk weights | Hand-set, transparent (Settings → Model card). The backtest tests the rainfall term only; see Settings → Historical backtest |
+| 1991–2026 district rainfall history | **Real** after you run `npm run fetch:history` and `npm run build:seasonal` |
+| Tamil Nadu district rice yields | **Real** only after you add the ICRISAT CSV and run `npm run normalize:yields` (see below) |
 
 The default scenario, **Observed now**, is built from the real inputs. The other five scenarios are what-if presets.
 
@@ -25,11 +27,33 @@ git add src/data/observed/climate.json && git commit -m "Update observed climate
 
 Vercel redeploys automatically after the push.
 
+### Historical data and backtest
+
+The build sandbox cannot reach NASA POWER or the ICRISAT data host, so these steps run on your computer. Each script fails loudly on missing or invalid input and never fills gaps.
+
+```bash
+npm run fetch:history     # NASA POWER daily rainfall & temperature, 1991–2026, 37 districts → data/raw/power/
+npm run build:seasonal    # 1 Jun – 5 Oct anomalies by district and year → src/data/observed/seasonal.json
+```
+
+Yield history is not bundled. Download the ICRISAT District Level Database CSV from Mendeley Data (DOI 10.17632/ywp3y5j9vv.1; check its licence on the dataset page) and place it in `data/raw/icrisat/`. Then:
+
+```bash
+npm run normalize:yields  # Tamil Nadu rice → data/processed/tn_rice_yields.json
+npm run backtest          # rainfall-anomaly backtest → src/data/observed/validation.json
+npm test                  # unit and synthetic end-to-end tests; no network; writes nothing into data/
+```
+
+The backtest uses leave-one-year-out testing: for each held-out year, the district trends and the regression are refit without that year. It reports Pearson and Spearman correlation, MAE against a trend-only baseline, and loss-year recall and precision. If the sample is too small, it reports `insufficient` with no metrics.
+
+Known limits: the predictor is seasonal rainfall only, and the 1 Jun – 5 Oct window misses the north-east monsoon. Yield data stops at the source year (2015), so 2023–24 is not validated. The app shows "not run" until each step has been executed.
+
 ## Run it
 
 ```bash
 npm install
 npm run dev          # http://localhost:5173
+npm test             # pipeline and model tests (node:test, synthetic inputs only)
 npm run build        # type-check + production build → dist/
 npm run build:single # one self-contained HTML file → dist-single/index.html
 ```
@@ -78,6 +102,6 @@ Risk = rainfall stress + water stress + temperature stress + ENSO forcing
      + coastal exposure + intrinsic crop sensitivity (− diversification buffer)
 ```
 
-Each term is crop- and district-weighted, deterministic, normalised to 0–100 and exposed as a named factor for explainability. Yield loss = risk × 45% ceiling. It is **not** a validated scientific model.
+Each term is crop- and district-weighted, deterministic, bounded to 2–98 and exposed as a named factor for explainability. Weights are exported as `W` in `src/model/risk.ts`. Yield loss = risk × 45% ceiling. It is **not** a validated scientific model, and the backtest tests only the rainfall term.
 
 Map boundaries: public Tamil Nadu district GeoJSON (2019 boundaries), simplified and projected by `scripts/build_geo.py`.

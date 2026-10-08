@@ -1,0 +1,98 @@
+{
+  "status": "ok",
+  "pairs": 670,
+  "years": 25,
+  "districts": 30,
+  "yieldRows": 689,
+  "unpairedYieldRows": 19,
+  "skippedFolds": [],
+  "metrics": {
+    "outOfSamplePairs": 670,
+    "districts": 30,
+    "years": 25,
+    "pearson_r": -0.051,
+    "spearman_rho": -0.006,
+    "mae_pct": 18.1,
+    "rmse_pct": 26.2,
+    "naive_mae_pct": 17.9,
+    "skill_vs_zero": -0.01,
+    "lossYears": 195,
+    "flaggedYears": 0,
+    "lossRecall": 0,
+    "lossPrecision": null
+  },
+  "events": [
+    {
+      "id": "el-nino-1997-98",
+      "label": "El Niño season 1997–98",
+      "year": 1997,
+      "statewideRainAnomPct": -0.7,
+      "districtsScored": 27,
+      "meanObservedYieldAnomPct": 8.2,
+      "meanPredictedYieldAnomPct": 0.3,
+      "districtsFlagged": 0,
+      "note": null
+    },
+    {
+      "id": "el-nino-2015-16",
+      "label": "El Niño season 2015–16",
+      "year": 2015,
+      "statewideRainAnomPct": -12.3,
+      "districtsScored": 30,
+      "meanObservedYieldAnomPct": 2.1,
+      "meanPredictedYieldAnomPct": -0.4,
+      "districtsFlagged": 0,
+      "note": null
+    },
+    {
+      "id": "el-nino-2023-24",
+      "label": "El Niño season 2023–24",
+      "year": 2023,
+      "statewideRainAnomPct": -1.9,
+      "districtsScored": 0,
+      "meanObservedYieldAnomPct": null,
+      "meanPredictedYieldAnomPct": null,
+      "districtsFlagged": 0,
+      "note": "No district yield data for this season in the processed dataset, so this event is not validated."
+    }
+  ],
+  "generatedAt": "2026-10-08T11:12:28.767Z",
+  "scope": "Tests the rainfall-anomaly component of the risk model only. It does not test the water-stock, temperature, ENSO, crop-sensitivity, sowing or intervention terms.",
+  "target": "Rice (paddy) district yield anomaly (%) against a per-district linear trend.",
+  "predictor": "Seasonal rainfall anomaly (%) for 1 Jun – 5 Oct against the 1991–2020 district mean (NASA POWER PRECTOTCORR).",
+  "method": "Leave-one-year-out. Each held-out year is scored with trends and regression refit without that year. Metrics use held-out predictions only.",
+  "thresholds": {
+    "lossYearPct": -10,
+    "predictedLossPct": -5,
+    "minPairs": 60,
+    "minYears": 6,
+    "minTrendYears": 5
+  },
+  "limitations": [
+    "The predictor is rainfall only. Irrigation, reservoir storage, pests, prices, input use and policy are not modelled, so they show up as unexplained error.",
+    "The 1 Jun – 5 Oct window misses the north-east monsoon (Oct–Dec), which matters for Samba and Thaladi rice in parts of Tamil Nadu. Losses driven by late rain will be missed.",
+    "The yield series is the district rice figure as published for each year. Source conventions for crop year and area may differ between years.",
+    "The 1991–2020 baseline used for the rainfall anomaly includes the years being tested. This leaks a little information into the test; the effect is small but not zero.",
+    "Trends are linear. Technology change, varietal shifts and policy changes can make the trend non-linear, which the test cannot separate from weather.",
+    "Yield data ends with the source year (2015 for the ICRISAT district database). Seasons after that are not validated, and the event-season check cannot test them.",
+    "No significance test is reported. With a few hundred district-years, the metrics are descriptive, not a claim of forecast accuracy."
+  ],
+  "inputs": {
+    "yieldSource": [
+      {
+        "file": "icrisat_dld_560_1990_2015_wide.csv",
+        "layout": "wide",
+        "sha256": "92ac90c1c44a15ea3acc4756dd33e8bf807042c55db16350fd7ffe8f8807b718"
+      }
+    ],
+    "yieldYearRange": [
+      1990,
+      2015
+    ],
+    "yieldRowsTotal": 689,
+    "seasonalSha256": "3f757ab4385c4886b84104f4275e88e5088a823efdcd1c8cfb4704272a524080",
+    "seasonalWindow": "1 Jun – 5 Oct (127 days)",
+    "seasonalBaseline": "1991–2020",
+    "seasonalLatestYear": 2026
+  }
+}

@@ -9,7 +9,12 @@
     "build:single": "vite build --mode single",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "fetch:climate": "node scripts/fetch-climate.mjs"
+    "test": "node --test tests/power.test.mjs tests/stats-csv.test.mjs tests/backtest.test.mjs tests/pipeline.test.mjs",
+    "fetch:climate": "node scripts/fetch-climate.mjs",
+    "fetch:history": "node scripts/fetch-history.mjs",
+    "build:seasonal": "node scripts/build-seasonal.mjs",
+    "normalize:yields": "node scripts/normalize-yields.mjs",
+    "backtest": "node scripts/backtest.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.11.17",

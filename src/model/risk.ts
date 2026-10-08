@@ -39,7 +39,8 @@ export interface CropModifiers {
 
 export interface CropRisk { crop: CropId; score: number; factors: Factor[]; yieldTHa: number; waterMm: number }
 
-const W = { rainfall: 28, water: 22, temperature: 14, enso: 9, coastal: 5 };
+/** Additive weights for the five stress terms. Exported so the Settings model card shows exactly what the code uses. */
+export const W = { rainfall: 28, water: 22, temperature: 14, enso: 9, coastal: 5 };
 
 function sowingEffect(shift: number) {
   // Delaying sowing aligns crop water demand with the north-east monsoon window; too late shortens the season.

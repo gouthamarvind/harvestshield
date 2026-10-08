@@ -23,6 +23,7 @@ const pages: Record<RouteId, React.ComponentType> = {
   water: lazy(() => import('./pages/Water')),
   planner: lazy(() => import('./pages/Planner')),
   alerts: lazy(() => import('./pages/Alerts')),
+  actions: lazy(() => import('./pages/ActionPlan')),
   farm: lazy(() => import('./pages/Farm')),
   insights: lazy(() => import('./pages/Insights')),
   reports: lazy(() => import('./pages/Reports')),

@@ -11,6 +11,7 @@ import { ensoLabel, presetById } from '../data/scenarios';
 import { riskColor } from '../lib/risk';
 import { fmtSigned, fmtInt } from '../lib/format';
 import { signalLevel } from '../services/foodSecurityService';
+import { EarlyWarningPanel } from '../components/EarlyWarningPanel';
 
 const waterLevel = (v: number) => (v >= 70 ? 'CRITICAL' : v >= 50 ? 'HIGH' : v >= 25 ? 'MEDIUM' : 'LOW');
 
@@ -75,6 +76,7 @@ export default function Overview() {
       </motion.section>
 
       {/* KPIs */}
+      <EarlyWarningPanel />
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
         <Kpi label="Crop risk" accent={riskColor(summary.cropRisk)} delay={0.05} icon={<Activity className="h-3 w-3" />} info="Monitored-area weighted modelled probability of severe yield loss." onClick={() => navigate('crops')}
           value={<><AnimatedNumber value={summary.cropRisk} /><span className="text-[16px] text-fog-500">%</span></>} sub={<RiskBadge score={summary.cropRisk} />} />

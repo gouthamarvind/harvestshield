@@ -1,4 +1,4 @@
-import { LayoutDashboard, Waves, Map, Sprout, FlaskConical, Wheat, Droplets, ListChecks, BellRing, Smartphone, Lightbulb, FileText, Settings, type LucideIcon } from 'lucide-react';
+import { LayoutDashboard, Waves, Map, Sprout, FlaskConical, Wheat, Droplets, ListChecks, BellRing, ClipboardCheck, Smartphone, Lightbulb, FileText, Settings, type LucideIcon } from 'lucide-react';
 import type { RouteId } from '../../lib/router';
 
 export interface NavItem { id: RouteId; label: string; icon: LucideIcon; group: 'Monitor' | 'Decide' | 'Operate' | 'System'; shortcut?: string; tag?: string }
@@ -12,6 +12,7 @@ export const NAV: NavItem[] = [
   { id: 'water', label: 'Water Intelligence', icon: Droplets, group: 'Decide', shortcut: 'G W' },
   { id: 'planner', label: 'Intervention Planner', icon: ListChecks, group: 'Decide', shortcut: 'G P' },
   { id: 'alerts', label: 'Alert Center', icon: BellRing, group: 'Operate', shortcut: 'G A' },
+  { id: 'actions', label: 'Action Plan', icon: ClipboardCheck, group: 'Operate', shortcut: 'G T' },
   { id: 'farm', label: 'Farm View', icon: Smartphone, group: 'Operate' },
   { id: 'insights', label: 'Insights', icon: Lightbulb, group: 'Operate', shortcut: 'G I' },
   { id: 'reports', label: 'Reports', icon: FileText, group: 'Operate', shortcut: 'G R' },

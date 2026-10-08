@@ -1,0 +1,5557 @@
+{
+  "status": "ok",
+  "generatedAt": "2026-10-08T11:12:28.636Z",
+  "crop": "rice (paddy)",
+  "unit": {
+    "area": "ha",
+    "production": "tonnes",
+    "yield": "kg/ha"
+  },
+  "yearConvention": "Season year as printed in the source; \"1997-98\" is recorded as 1997",
+  "boundaryNote": "Source district units are those of each year. Several 1990–2015 units cover more than one of today's districts. See the report for names that were not matched or were ambiguous.",
+  "coverage": {
+    "rows": 689,
+    "districts": 30,
+    "years": 26,
+    "yearRange": [
+      1990,
+      2015
+    ]
+  },
+  "report": {
+    "files": [
+      {
+        "file": "icrisat_dld_560_1990_2015_wide.csv",
+        "layout": "wide",
+        "sha256": "92ac90c1c44a15ea3acc4756dd33e8bf807042c55db16350fd7ffe8f8807b718",
+        "bytes": 21122636
+      }
+    ],
+    "rowsRead": 12803,
+    "notTamilNadu": 12077,
+    "notRice": 0,
+    "unmatchedDistricts": {},
+    "ambiguousDistricts": {
+      "Chengalpattu MGR / Kancheepuram": 26
+    },
+    "badYear": 0,
+    "missingValues": 0,
+    "implausible": 11,
+    "duplicates": 0,
+    "kept": 689
+  },
+  "rows": [
+    {
+      "district": "ariyalur",
+      "year": 2008,
+      "area_ha": 24570,
+      "production_t": 75630,
+      "yield_kg_ha": 3078,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2009,
+      "area_ha": 25980,
+      "production_t": 80460,
+      "yield_kg_ha": 3097,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2010,
+      "area_ha": 25210,
+      "production_t": 97870,
+      "yield_kg_ha": 3882,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2011,
+      "area_ha": 24100,
+      "production_t": 97260,
+      "yield_kg_ha": 4036,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2012,
+      "area_ha": 17520,
+      "production_t": 36390,
+      "yield_kg_ha": 2077,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2013,
+      "area_ha": 24440,
+      "production_t": 131660,
+      "yield_kg_ha": 5387,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2014,
+      "area_ha": 23110,
+      "production_t": 116240,
+      "yield_kg_ha": 5030,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ariyalur",
+      "year": 2015,
+      "area_ha": 24410,
+      "production_t": 124180,
+      "yield_kg_ha": 5087,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1990,
+      "area_ha": 18160,
+      "production_t": 62750,
+      "yield_kg_ha": 3455,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1991,
+      "area_ha": 21290,
+      "production_t": 73830,
+      "yield_kg_ha": 3468,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1992,
+      "area_ha": 27030,
+      "production_t": 86260,
+      "yield_kg_ha": 3191,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1993,
+      "area_ha": 25000,
+      "production_t": 83000,
+      "yield_kg_ha": 3320,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1994,
+      "area_ha": 19340,
+      "production_t": 71480,
+      "yield_kg_ha": 3696,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1995,
+      "area_ha": 13850,
+      "production_t": 46860,
+      "yield_kg_ha": 3384,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1996,
+      "area_ha": 17470,
+      "production_t": 65120,
+      "yield_kg_ha": 3727,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1997,
+      "area_ha": 18700,
+      "production_t": 57670,
+      "yield_kg_ha": 3083,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1998,
+      "area_ha": 12260,
+      "production_t": 44250,
+      "yield_kg_ha": 3610,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 1999,
+      "area_ha": 17880,
+      "production_t": 69350,
+      "yield_kg_ha": 3880,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2000,
+      "area_ha": 14110,
+      "production_t": 50030,
+      "yield_kg_ha": 3546,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2001,
+      "area_ha": 10550,
+      "production_t": 37200,
+      "yield_kg_ha": 3527,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2002,
+      "area_ha": 6580,
+      "production_t": 22150,
+      "yield_kg_ha": 3368,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2003,
+      "area_ha": 3650,
+      "production_t": 10640,
+      "yield_kg_ha": 2913,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2004,
+      "area_ha": 7240,
+      "production_t": 24450,
+      "yield_kg_ha": 3378,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2005,
+      "area_ha": 7410,
+      "production_t": 20670,
+      "yield_kg_ha": 2790,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2006,
+      "area_ha": 6220,
+      "production_t": 24010,
+      "yield_kg_ha": 3859,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2007,
+      "area_ha": 6480,
+      "production_t": 24460,
+      "yield_kg_ha": 3775,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2008,
+      "area_ha": 2570,
+      "production_t": 4800,
+      "yield_kg_ha": 1866,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2009,
+      "area_ha": 2820,
+      "production_t": 9880,
+      "yield_kg_ha": 3509,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2010,
+      "area_ha": 2670,
+      "production_t": 10420,
+      "yield_kg_ha": 3908,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2011,
+      "area_ha": 2630,
+      "production_t": 10490,
+      "yield_kg_ha": 3989,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2012,
+      "area_ha": 2160,
+      "production_t": 7890,
+      "yield_kg_ha": 3660,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2013,
+      "area_ha": 2160,
+      "production_t": 10140,
+      "yield_kg_ha": 4694,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2014,
+      "area_ha": 2170,
+      "production_t": 9970,
+      "yield_kg_ha": 4594,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "coimbatore",
+      "year": 2015,
+      "area_ha": 2030,
+      "production_t": 7940,
+      "yield_kg_ha": 3911,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1990,
+      "area_ha": 179940,
+      "production_t": 611610,
+      "yield_kg_ha": 3399,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1991,
+      "area_ha": 233310,
+      "production_t": 827590,
+      "yield_kg_ha": 3547,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1992,
+      "area_ha": 241880,
+      "production_t": 780580,
+      "yield_kg_ha": 3227,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1993,
+      "area_ha": 252000,
+      "production_t": 625000,
+      "yield_kg_ha": 2480,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1994,
+      "area_ha": 108940,
+      "production_t": 410990,
+      "yield_kg_ha": 3773,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1995,
+      "area_ha": 106430,
+      "production_t": 325440,
+      "yield_kg_ha": 3058,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1996,
+      "area_ha": 116400,
+      "production_t": 218630,
+      "yield_kg_ha": 1878,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1997,
+      "area_ha": 116630,
+      "production_t": 358110,
+      "yield_kg_ha": 3071,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1998,
+      "area_ha": 110790,
+      "production_t": 370940,
+      "yield_kg_ha": 3348,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 1999,
+      "area_ha": 113840,
+      "production_t": 439850,
+      "yield_kg_ha": 3864,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2000,
+      "area_ha": 114320,
+      "production_t": 419740,
+      "yield_kg_ha": 3672,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2001,
+      "area_ha": 108380,
+      "production_t": 402810,
+      "yield_kg_ha": 3717,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2002,
+      "area_ha": 102340,
+      "production_t": 281710,
+      "yield_kg_ha": 2753,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2003,
+      "area_ha": 104160,
+      "production_t": 317660,
+      "yield_kg_ha": 3050,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2004,
+      "area_ha": 114600,
+      "production_t": 315700,
+      "yield_kg_ha": 2755,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2005,
+      "area_ha": 114290,
+      "production_t": 218350,
+      "yield_kg_ha": 1910,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2006,
+      "area_ha": 105440,
+      "production_t": 392380,
+      "yield_kg_ha": 3721,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2007,
+      "area_ha": 102800,
+      "production_t": 335120,
+      "yield_kg_ha": 3260,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2008,
+      "area_ha": 107820,
+      "production_t": 223880,
+      "yield_kg_ha": 2076,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2009,
+      "area_ha": 111520,
+      "production_t": 322960,
+      "yield_kg_ha": 2896,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2010,
+      "area_ha": 115820,
+      "production_t": 301510,
+      "yield_kg_ha": 2603,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2011,
+      "area_ha": 120980,
+      "production_t": 248240,
+      "yield_kg_ha": 2052,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2012,
+      "area_ha": 111960,
+      "production_t": 339290,
+      "yield_kg_ha": 3030,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2013,
+      "area_ha": 127490,
+      "production_t": 565960,
+      "yield_kg_ha": 4439,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2014,
+      "area_ha": 134680,
+      "production_t": 641960,
+      "yield_kg_ha": 4767,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "cuddalore",
+      "year": 2015,
+      "area_ha": 139990,
+      "production_t": 507130,
+      "yield_kg_ha": 3623,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1990,
+      "area_ha": 29930,
+      "production_t": 96180,
+      "yield_kg_ha": 3213,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1991,
+      "area_ha": 76600,
+      "production_t": 244430,
+      "yield_kg_ha": 3191,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1992,
+      "area_ha": 47350,
+      "production_t": 119200,
+      "yield_kg_ha": 2517,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1993,
+      "area_ha": 56000,
+      "production_t": 174000,
+      "yield_kg_ha": 3107,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1994,
+      "area_ha": 50990,
+      "production_t": 187550,
+      "yield_kg_ha": 3678,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1995,
+      "area_ha": 47700,
+      "production_t": 177870,
+      "yield_kg_ha": 3729,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1996,
+      "area_ha": 59810,
+      "production_t": 183310,
+      "yield_kg_ha": 3065,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1997,
+      "area_ha": 64390,
+      "production_t": 203890,
+      "yield_kg_ha": 3166,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1998,
+      "area_ha": 62180,
+      "production_t": 229330,
+      "yield_kg_ha": 3688,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 1999,
+      "area_ha": 54880,
+      "production_t": 200570,
+      "yield_kg_ha": 3655,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2000,
+      "area_ha": 55910,
+      "production_t": 190830,
+      "yield_kg_ha": 3413,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2001,
+      "area_ha": 54330,
+      "production_t": 189510,
+      "yield_kg_ha": 3488,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2002,
+      "area_ha": 30150,
+      "production_t": 77600,
+      "yield_kg_ha": 2573,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2003,
+      "area_ha": 4490,
+      "production_t": 17860,
+      "yield_kg_ha": 3982,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2004,
+      "area_ha": 13920,
+      "production_t": 38570,
+      "yield_kg_ha": 2772,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2005,
+      "area_ha": 29020,
+      "production_t": 85390,
+      "yield_kg_ha": 2942,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2006,
+      "area_ha": 21060,
+      "production_t": 76070,
+      "yield_kg_ha": 3612,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2007,
+      "area_ha": 18800,
+      "production_t": 70400,
+      "yield_kg_ha": 3744,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2008,
+      "area_ha": 20370,
+      "production_t": 77730,
+      "yield_kg_ha": 3816,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2009,
+      "area_ha": 20310,
+      "production_t": 79680,
+      "yield_kg_ha": 3923,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2010,
+      "area_ha": 22860,
+      "production_t": 93210,
+      "yield_kg_ha": 4077,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2011,
+      "area_ha": 27070,
+      "production_t": 128230,
+      "yield_kg_ha": 4737,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2012,
+      "area_ha": 12000,
+      "production_t": 53670,
+      "yield_kg_ha": 4471,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2013,
+      "area_ha": 26690,
+      "production_t": 132540,
+      "yield_kg_ha": 4966,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2014,
+      "area_ha": 18300,
+      "production_t": 95160,
+      "yield_kg_ha": 5200,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dharmapuri",
+      "year": 2015,
+      "area_ha": 33350,
+      "production_t": 149430,
+      "yield_kg_ha": 4481,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1990,
+      "area_ha": 21950,
+      "production_t": 80560,
+      "yield_kg_ha": 3670,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1991,
+      "area_ha": 19720,
+      "production_t": 72300,
+      "yield_kg_ha": 3666,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1992,
+      "area_ha": 23480,
+      "production_t": 89380,
+      "yield_kg_ha": 3807,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1993,
+      "area_ha": 32000,
+      "production_t": 110000,
+      "yield_kg_ha": 3438,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1994,
+      "area_ha": 31530,
+      "production_t": 160810,
+      "yield_kg_ha": 5100,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1995,
+      "area_ha": 18730,
+      "production_t": 76690,
+      "yield_kg_ha": 4094,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1996,
+      "area_ha": 23290,
+      "production_t": 95370,
+      "yield_kg_ha": 4096,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1997,
+      "area_ha": 27590,
+      "production_t": 136520,
+      "yield_kg_ha": 4948,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1998,
+      "area_ha": 27120,
+      "production_t": 148140,
+      "yield_kg_ha": 5463,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 1999,
+      "area_ha": 28340,
+      "production_t": 136860,
+      "yield_kg_ha": 4829,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2000,
+      "area_ha": 22940,
+      "production_t": 107760,
+      "yield_kg_ha": 4698,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2001,
+      "area_ha": 16110,
+      "production_t": 76330,
+      "yield_kg_ha": 4739,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2002,
+      "area_ha": 15370,
+      "production_t": 52710,
+      "yield_kg_ha": 3429,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2003,
+      "area_ha": 11440,
+      "production_t": 32380,
+      "yield_kg_ha": 2831,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2004,
+      "area_ha": 21030,
+      "production_t": 74250,
+      "yield_kg_ha": 3530,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2005,
+      "area_ha": 23740,
+      "production_t": 75300,
+      "yield_kg_ha": 3173,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2006,
+      "area_ha": 18610,
+      "production_t": 81250,
+      "yield_kg_ha": 4367,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2007,
+      "area_ha": 17280,
+      "production_t": 67840,
+      "yield_kg_ha": 3927,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2008,
+      "area_ha": 19640,
+      "production_t": 72660,
+      "yield_kg_ha": 3700,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2009,
+      "area_ha": 16650,
+      "production_t": 78850,
+      "yield_kg_ha": 4737,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2010,
+      "area_ha": 18350,
+      "production_t": 98050,
+      "yield_kg_ha": 5344,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2011,
+      "area_ha": 19160,
+      "production_t": 103380,
+      "yield_kg_ha": 5396,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2012,
+      "area_ha": 9480,
+      "production_t": 30810,
+      "yield_kg_ha": 3251,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2013,
+      "area_ha": 4230,
+      "production_t": 25760,
+      "yield_kg_ha": 6090,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2014,
+      "area_ha": 12070,
+      "production_t": 70680,
+      "yield_kg_ha": 5856,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "dindigul",
+      "year": 2015,
+      "area_ha": 14990,
+      "production_t": 71950,
+      "yield_kg_ha": 4800,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1990,
+      "area_ha": 64260,
+      "production_t": 277260,
+      "yield_kg_ha": 4315,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1991,
+      "area_ha": 75560,
+      "production_t": 285820,
+      "yield_kg_ha": 3783,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1992,
+      "area_ha": 75760,
+      "production_t": 279080,
+      "yield_kg_ha": 3684,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1993,
+      "area_ha": 71000,
+      "production_t": 287000,
+      "yield_kg_ha": 4042,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1994,
+      "area_ha": 64780,
+      "production_t": 278520,
+      "yield_kg_ha": 4299,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1995,
+      "area_ha": 61670,
+      "production_t": 265430,
+      "yield_kg_ha": 4304,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1996,
+      "area_ha": 67580,
+      "production_t": 280930,
+      "yield_kg_ha": 4157,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1997,
+      "area_ha": 60890,
+      "production_t": 268930,
+      "yield_kg_ha": 4417,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1998,
+      "area_ha": 57960,
+      "production_t": 272600,
+      "yield_kg_ha": 4703,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 1999,
+      "area_ha": 60330,
+      "production_t": 278080,
+      "yield_kg_ha": 4609,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2000,
+      "area_ha": 58020,
+      "production_t": 260660,
+      "yield_kg_ha": 4492,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2001,
+      "area_ha": 50470,
+      "production_t": 233910,
+      "yield_kg_ha": 4634,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2002,
+      "area_ha": 16690,
+      "production_t": 74470,
+      "yield_kg_ha": 4462,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2003,
+      "area_ha": 1940,
+      "production_t": 7960,
+      "yield_kg_ha": 4096,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2004,
+      "area_ha": 55350,
+      "production_t": 216250,
+      "yield_kg_ha": 3907,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2005,
+      "area_ha": 43540,
+      "production_t": 179560,
+      "yield_kg_ha": 4124,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2006,
+      "area_ha": 38550,
+      "production_t": 161600,
+      "yield_kg_ha": 4192,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2007,
+      "area_ha": 38360,
+      "production_t": 166860,
+      "yield_kg_ha": 4350,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2008,
+      "area_ha": 38050,
+      "production_t": 196320,
+      "yield_kg_ha": 5159,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2009,
+      "area_ha": 38110,
+      "production_t": 156420,
+      "yield_kg_ha": 4104,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2010,
+      "area_ha": 36660,
+      "production_t": 154540,
+      "yield_kg_ha": 4216,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2011,
+      "area_ha": 33720,
+      "production_t": 144360,
+      "yield_kg_ha": 4281,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2012,
+      "area_ha": 6600,
+      "production_t": 29130,
+      "yield_kg_ha": 4411,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2013,
+      "area_ha": 30890,
+      "production_t": 163020,
+      "yield_kg_ha": 5277,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2014,
+      "area_ha": 37190,
+      "production_t": 177000,
+      "yield_kg_ha": 4759,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "erode",
+      "year": 2015,
+      "area_ha": 34340,
+      "production_t": 146570,
+      "yield_kg_ha": 4268,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1990,
+      "area_ha": 41230,
+      "production_t": 127820,
+      "yield_kg_ha": 3100,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1991,
+      "area_ha": 40570,
+      "production_t": 143220,
+      "yield_kg_ha": 3530,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1992,
+      "area_ha": 38790,
+      "production_t": 118920,
+      "yield_kg_ha": 3066,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1993,
+      "area_ha": 42000,
+      "production_t": 142000,
+      "yield_kg_ha": 3381,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1994,
+      "area_ha": 37570,
+      "production_t": 151650,
+      "yield_kg_ha": 4036,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1995,
+      "area_ha": 36020,
+      "production_t": 148730,
+      "yield_kg_ha": 4129,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1996,
+      "area_ha": 33660,
+      "production_t": 138930,
+      "yield_kg_ha": 4128,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1997,
+      "area_ha": 31240,
+      "production_t": 118640,
+      "yield_kg_ha": 3797,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1998,
+      "area_ha": 32000,
+      "production_t": 152800,
+      "yield_kg_ha": 4774,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 1999,
+      "area_ha": 31480,
+      "production_t": 149480,
+      "yield_kg_ha": 4749,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2000,
+      "area_ha": 28590,
+      "production_t": 135000,
+      "yield_kg_ha": 4721,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2001,
+      "area_ha": 28230,
+      "production_t": 121390,
+      "yield_kg_ha": 4300,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2002,
+      "area_ha": 26050,
+      "production_t": 98470,
+      "yield_kg_ha": 3780,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2003,
+      "area_ha": 17320,
+      "production_t": 52900,
+      "yield_kg_ha": 3054,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2004,
+      "area_ha": 22020,
+      "production_t": 86490,
+      "yield_kg_ha": 3928,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2005,
+      "area_ha": 21710,
+      "production_t": 82520,
+      "yield_kg_ha": 3801,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2006,
+      "area_ha": 21410,
+      "production_t": 94130,
+      "yield_kg_ha": 4397,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2007,
+      "area_ha": 20350,
+      "production_t": 90210,
+      "yield_kg_ha": 4433,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2008,
+      "area_ha": 18190,
+      "production_t": 83660,
+      "yield_kg_ha": 4600,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2009,
+      "area_ha": 17310,
+      "production_t": 76240,
+      "yield_kg_ha": 4405,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2010,
+      "area_ha": 16990,
+      "production_t": 80390,
+      "yield_kg_ha": 4732,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2011,
+      "area_ha": 16620,
+      "production_t": 90110,
+      "yield_kg_ha": 5423,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2012,
+      "area_ha": 12410,
+      "production_t": 57880,
+      "yield_kg_ha": 4663,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2013,
+      "area_ha": 13620,
+      "production_t": 66700,
+      "yield_kg_ha": 4897,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2014,
+      "area_ha": 13180,
+      "production_t": 66940,
+      "yield_kg_ha": 5079,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "kanyakumari",
+      "year": 2015,
+      "area_ha": 12960,
+      "production_t": 55790,
+      "yield_kg_ha": 4305,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 1996,
+      "area_ha": 15480,
+      "production_t": 45960,
+      "yield_kg_ha": 2969,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 1997,
+      "area_ha": 16450,
+      "production_t": 48590,
+      "yield_kg_ha": 2954,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 1998,
+      "area_ha": 16250,
+      "production_t": 67340,
+      "yield_kg_ha": 4145,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 1999,
+      "area_ha": 19480,
+      "production_t": 66070,
+      "yield_kg_ha": 3392,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2000,
+      "area_ha": 17950,
+      "production_t": 81110,
+      "yield_kg_ha": 4518,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2001,
+      "area_ha": 15540,
+      "production_t": 56120,
+      "yield_kg_ha": 3612,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2002,
+      "area_ha": 12840,
+      "production_t": 37510,
+      "yield_kg_ha": 2922,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2003,
+      "area_ha": 9320,
+      "production_t": 24070,
+      "yield_kg_ha": 2582,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2004,
+      "area_ha": 18230,
+      "production_t": 54280,
+      "yield_kg_ha": 2977,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2005,
+      "area_ha": 18400,
+      "production_t": 48230,
+      "yield_kg_ha": 2621,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2006,
+      "area_ha": 13750,
+      "production_t": 48270,
+      "yield_kg_ha": 3512,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2007,
+      "area_ha": 12430,
+      "production_t": 40280,
+      "yield_kg_ha": 3240,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2008,
+      "area_ha": 15630,
+      "production_t": 60160,
+      "yield_kg_ha": 3849,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2009,
+      "area_ha": 15010,
+      "production_t": 64090,
+      "yield_kg_ha": 4269,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2010,
+      "area_ha": 14810,
+      "production_t": 56990,
+      "yield_kg_ha": 3849,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2011,
+      "area_ha": 17090,
+      "production_t": 65740,
+      "yield_kg_ha": 3847,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2012,
+      "area_ha": 10910,
+      "production_t": 44070,
+      "yield_kg_ha": 4041,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2013,
+      "area_ha": 12570,
+      "production_t": 69900,
+      "yield_kg_ha": 5561,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2014,
+      "area_ha": 13450,
+      "production_t": 68610,
+      "yield_kg_ha": 5101,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "karur",
+      "year": 2015,
+      "area_ha": 13280,
+      "production_t": 52890,
+      "yield_kg_ha": 3983,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2003,
+      "area_ha": 11510,
+      "production_t": 20950,
+      "yield_kg_ha": 1820,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2004,
+      "area_ha": 17620,
+      "production_t": 45250,
+      "yield_kg_ha": 2568,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2005,
+      "area_ha": 21980,
+      "production_t": 57800,
+      "yield_kg_ha": 2630,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2006,
+      "area_ha": 17890,
+      "production_t": 51040,
+      "yield_kg_ha": 2853,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2007,
+      "area_ha": 14980,
+      "production_t": 47670,
+      "yield_kg_ha": 3182,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2008,
+      "area_ha": 14620,
+      "production_t": 52300,
+      "yield_kg_ha": 3577,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2009,
+      "area_ha": 16490,
+      "production_t": 64980,
+      "yield_kg_ha": 3940,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2010,
+      "area_ha": 16340,
+      "production_t": 70130,
+      "yield_kg_ha": 4292,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2011,
+      "area_ha": 20110,
+      "production_t": 91440,
+      "yield_kg_ha": 4547,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2012,
+      "area_ha": 17750,
+      "production_t": 72190,
+      "yield_kg_ha": 4066,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2013,
+      "area_ha": 29700,
+      "production_t": 143400,
+      "yield_kg_ha": 4828,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2014,
+      "area_ha": 19260,
+      "production_t": 94090,
+      "yield_kg_ha": 4885,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "krishnagiri",
+      "year": 2015,
+      "area_ha": 22810,
+      "production_t": 102310,
+      "yield_kg_ha": 4485,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1990,
+      "area_ha": 119150,
+      "production_t": 409550,
+      "yield_kg_ha": 3437,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1991,
+      "area_ha": 102540,
+      "production_t": 363750,
+      "yield_kg_ha": 3547,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1992,
+      "area_ha": 116330,
+      "production_t": 443030,
+      "yield_kg_ha": 3808,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1993,
+      "area_ha": 118000,
+      "production_t": 433000,
+      "yield_kg_ha": 3669,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1994,
+      "area_ha": 114960,
+      "production_t": 472700,
+      "yield_kg_ha": 4112,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1995,
+      "area_ha": 88920,
+      "production_t": 266060,
+      "yield_kg_ha": 2992,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1996,
+      "area_ha": 84710,
+      "production_t": 299270,
+      "yield_kg_ha": 3533,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1997,
+      "area_ha": 83060,
+      "production_t": 314380,
+      "yield_kg_ha": 3785,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1998,
+      "area_ha": 87230,
+      "production_t": 409870,
+      "yield_kg_ha": 4699,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 1999,
+      "area_ha": 82330,
+      "production_t": 365050,
+      "yield_kg_ha": 4434,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2000,
+      "area_ha": 76910,
+      "production_t": 325000,
+      "yield_kg_ha": 4226,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2001,
+      "area_ha": 68130,
+      "production_t": 271590,
+      "yield_kg_ha": 3986,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2002,
+      "area_ha": 43960,
+      "production_t": 112170,
+      "yield_kg_ha": 2552,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2003,
+      "area_ha": 23930,
+      "production_t": 65020,
+      "yield_kg_ha": 2717,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2004,
+      "area_ha": 60370,
+      "production_t": 196580,
+      "yield_kg_ha": 3256,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2005,
+      "area_ha": 71000,
+      "production_t": 234490,
+      "yield_kg_ha": 3303,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2006,
+      "area_ha": 67230,
+      "production_t": 267520,
+      "yield_kg_ha": 3979,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2007,
+      "area_ha": 61860,
+      "production_t": 214880,
+      "yield_kg_ha": 3473,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2008,
+      "area_ha": 66700,
+      "production_t": 267230,
+      "yield_kg_ha": 4006,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2009,
+      "area_ha": 50990,
+      "production_t": 203620,
+      "yield_kg_ha": 3994,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2010,
+      "area_ha": 61060,
+      "production_t": 260060,
+      "yield_kg_ha": 4259,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2011,
+      "area_ha": 65640,
+      "production_t": 304240,
+      "yield_kg_ha": 4635,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2012,
+      "area_ha": 18020,
+      "production_t": 65000,
+      "yield_kg_ha": 3606,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2013,
+      "area_ha": 35270,
+      "production_t": 163970,
+      "yield_kg_ha": 4649,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2014,
+      "area_ha": 47720,
+      "production_t": 197500,
+      "yield_kg_ha": 4139,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "madurai",
+      "year": 2015,
+      "area_ha": 55980,
+      "production_t": 203670,
+      "yield_kg_ha": 3638,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1992,
+      "area_ha": 306090,
+      "production_t": 1028220,
+      "yield_kg_ha": 3359,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1993,
+      "area_ha": 318000,
+      "production_t": 627000,
+      "yield_kg_ha": 1972,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1994,
+      "area_ha": 321130,
+      "production_t": 1175290,
+      "yield_kg_ha": 3660,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1995,
+      "area_ha": 288840,
+      "production_t": 676610,
+      "yield_kg_ha": 2342,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1996,
+      "area_ha": 145360,
+      "production_t": 239560,
+      "yield_kg_ha": 1648,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1997,
+      "area_ha": 156950,
+      "production_t": 269630,
+      "yield_kg_ha": 1718,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1998,
+      "area_ha": 159260,
+      "production_t": 454190,
+      "yield_kg_ha": 2852,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 1999,
+      "area_ha": 163620,
+      "production_t": 547520,
+      "yield_kg_ha": 3346,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2000,
+      "area_ha": 167320,
+      "production_t": 547630,
+      "yield_kg_ha": 3273,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2001,
+      "area_ha": 168270,
+      "production_t": 427500,
+      "yield_kg_ha": 2541,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2002,
+      "area_ha": 137720,
+      "production_t": 159450,
+      "yield_kg_ha": 1158,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2003,
+      "area_ha": 136040,
+      "production_t": 259870,
+      "yield_kg_ha": 1910,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2004,
+      "area_ha": 153140,
+      "production_t": 140660,
+      "yield_kg_ha": 919,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2005,
+      "area_ha": 158100,
+      "production_t": 136640,
+      "yield_kg_ha": 864,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2006,
+      "area_ha": 165710,
+      "production_t": 630610,
+      "yield_kg_ha": 3805,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2007,
+      "area_ha": 154040,
+      "production_t": 289320,
+      "yield_kg_ha": 1878,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2008,
+      "area_ha": 170840,
+      "production_t": 225150,
+      "yield_kg_ha": 1318,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2009,
+      "area_ha": 157860,
+      "production_t": 432030,
+      "yield_kg_ha": 2737,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2010,
+      "area_ha": 156050,
+      "production_t": 321510,
+      "yield_kg_ha": 2060,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2011,
+      "area_ha": 170040,
+      "production_t": 577030,
+      "yield_kg_ha": 3393,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2012,
+      "area_ha": 142210,
+      "production_t": 201550,
+      "yield_kg_ha": 1417,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2013,
+      "area_ha": 154750,
+      "production_t": 605330,
+      "yield_kg_ha": 3912,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2014,
+      "area_ha": 159500,
+      "production_t": 579960,
+      "yield_kg_ha": 3636,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nagapattinam",
+      "year": 2015,
+      "area_ha": 163790,
+      "production_t": 338260,
+      "yield_kg_ha": 2065,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 1996,
+      "area_ha": 25370,
+      "production_t": 95160,
+      "yield_kg_ha": 3751,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 1997,
+      "area_ha": 23980,
+      "production_t": 99150,
+      "yield_kg_ha": 4134,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 1998,
+      "area_ha": 24640,
+      "production_t": 120430,
+      "yield_kg_ha": 4889,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 1999,
+      "area_ha": 22730,
+      "production_t": 109370,
+      "yield_kg_ha": 4812,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2000,
+      "area_ha": 21460,
+      "production_t": 93600,
+      "yield_kg_ha": 4362,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2001,
+      "area_ha": 21360,
+      "production_t": 97610,
+      "yield_kg_ha": 4570,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2002,
+      "area_ha": 9440,
+      "production_t": 34970,
+      "yield_kg_ha": 3703,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2003,
+      "area_ha": 7480,
+      "production_t": 24360,
+      "yield_kg_ha": 3257,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2004,
+      "area_ha": 9040,
+      "production_t": 28790,
+      "yield_kg_ha": 3184,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2005,
+      "area_ha": 18830,
+      "production_t": 68850,
+      "yield_kg_ha": 3656,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2006,
+      "area_ha": 15220,
+      "production_t": 57680,
+      "yield_kg_ha": 3789,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2007,
+      "area_ha": 12210,
+      "production_t": 45300,
+      "yield_kg_ha": 3712,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2008,
+      "area_ha": 13910,
+      "production_t": 67300,
+      "yield_kg_ha": 4839,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2009,
+      "area_ha": 10690,
+      "production_t": 45950,
+      "yield_kg_ha": 4299,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2010,
+      "area_ha": 14060,
+      "production_t": 53960,
+      "yield_kg_ha": 3838,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2011,
+      "area_ha": 8130,
+      "production_t": 35750,
+      "yield_kg_ha": 4397,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2012,
+      "area_ha": 5550,
+      "production_t": 20250,
+      "yield_kg_ha": 3653,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2013,
+      "area_ha": 9180,
+      "production_t": 50980,
+      "yield_kg_ha": 5553,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2014,
+      "area_ha": 10420,
+      "production_t": 53330,
+      "yield_kg_ha": 5118,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "namakkal",
+      "year": 2015,
+      "area_ha": 11980,
+      "production_t": 60390,
+      "yield_kg_ha": 5041,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1990,
+      "area_ha": 2780,
+      "production_t": 6890,
+      "yield_kg_ha": 2478,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1991,
+      "area_ha": 1560,
+      "production_t": 4870,
+      "yield_kg_ha": 3122,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1992,
+      "area_ha": 1870,
+      "production_t": 3840,
+      "yield_kg_ha": 2053,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1993,
+      "area_ha": 2000,
+      "production_t": 3000,
+      "yield_kg_ha": 1500,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1994,
+      "area_ha": 1590,
+      "production_t": 3160,
+      "yield_kg_ha": 1987,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1995,
+      "area_ha": 1680,
+      "production_t": 2250,
+      "yield_kg_ha": 1343,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1996,
+      "area_ha": 1940,
+      "production_t": 3080,
+      "yield_kg_ha": 1592,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1997,
+      "area_ha": 1720,
+      "production_t": 5980,
+      "yield_kg_ha": 3485,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1998,
+      "area_ha": 1740,
+      "production_t": 7050,
+      "yield_kg_ha": 4049,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 1999,
+      "area_ha": 1950,
+      "production_t": 7980,
+      "yield_kg_ha": 4103,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2000,
+      "area_ha": 2030,
+      "production_t": 8350,
+      "yield_kg_ha": 4105,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2001,
+      "area_ha": 2150,
+      "production_t": 8440,
+      "yield_kg_ha": 3918,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2002,
+      "area_ha": 1850,
+      "production_t": 6230,
+      "yield_kg_ha": 3371,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2003,
+      "area_ha": 1640,
+      "production_t": 5410,
+      "yield_kg_ha": 3311,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2004,
+      "area_ha": 1440,
+      "production_t": 4760,
+      "yield_kg_ha": 3301,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2005,
+      "area_ha": 1430,
+      "production_t": 4720,
+      "yield_kg_ha": 3298,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2006,
+      "area_ha": 1250,
+      "production_t": 4000,
+      "yield_kg_ha": 3199,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2007,
+      "area_ha": 1110,
+      "production_t": 4290,
+      "yield_kg_ha": 3862,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2008,
+      "area_ha": 780,
+      "production_t": 3050,
+      "yield_kg_ha": 3930,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2009,
+      "area_ha": 510,
+      "production_t": 1780,
+      "yield_kg_ha": 3503,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2010,
+      "area_ha": 390,
+      "production_t": 1400,
+      "yield_kg_ha": 3571,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2011,
+      "area_ha": 400,
+      "production_t": 1650,
+      "yield_kg_ha": 4125,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2012,
+      "area_ha": 290,
+      "production_t": 1150,
+      "yield_kg_ha": 3972,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2013,
+      "area_ha": 330,
+      "production_t": 1420,
+      "yield_kg_ha": 4303,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2014,
+      "area_ha": 30,
+      "production_t": 150,
+      "yield_kg_ha": 5000,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "nilgiris",
+      "year": 2015,
+      "area_ha": 320,
+      "production_t": 1420,
+      "yield_kg_ha": 4438,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 1996,
+      "area_ha": 47580,
+      "production_t": 142200,
+      "yield_kg_ha": 2989,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 1997,
+      "area_ha": 49850,
+      "production_t": 152820,
+      "yield_kg_ha": 3066,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 1998,
+      "area_ha": 51400,
+      "production_t": 139100,
+      "yield_kg_ha": 2706,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 1999,
+      "area_ha": 52450,
+      "production_t": 181340,
+      "yield_kg_ha": 3457,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2000,
+      "area_ha": 54610,
+      "production_t": 174820,
+      "yield_kg_ha": 3202,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2001,
+      "area_ha": 48730,
+      "production_t": 118710,
+      "yield_kg_ha": 2436,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2002,
+      "area_ha": 35880,
+      "production_t": 60510,
+      "yield_kg_ha": 1687,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2003,
+      "area_ha": 36380,
+      "production_t": 85910,
+      "yield_kg_ha": 2361,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2004,
+      "area_ha": 46430,
+      "production_t": 108510,
+      "yield_kg_ha": 2337,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2005,
+      "area_ha": 45950,
+      "production_t": 114560,
+      "yield_kg_ha": 2493,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2006,
+      "area_ha": 41930,
+      "production_t": 131980,
+      "yield_kg_ha": 3148,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2007,
+      "area_ha": 38120,
+      "production_t": 95430,
+      "yield_kg_ha": 2503,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2008,
+      "area_ha": 12400,
+      "production_t": 38160,
+      "yield_kg_ha": 3078,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2009,
+      "area_ha": 12090,
+      "production_t": 42370,
+      "yield_kg_ha": 3505,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2010,
+      "area_ha": 14250,
+      "production_t": 54710,
+      "yield_kg_ha": 3841,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2011,
+      "area_ha": 13100,
+      "production_t": 58480,
+      "yield_kg_ha": 4464,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2012,
+      "area_ha": 7300,
+      "production_t": 20890,
+      "yield_kg_ha": 2862,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2013,
+      "area_ha": 7180,
+      "production_t": 36160,
+      "yield_kg_ha": 5036,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2014,
+      "area_ha": 8990,
+      "production_t": 43430,
+      "yield_kg_ha": 4831,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "perambalur",
+      "year": 2015,
+      "area_ha": 14090,
+      "production_t": 64210,
+      "yield_kg_ha": 4557,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1990,
+      "area_ha": 68440,
+      "production_t": 172550,
+      "yield_kg_ha": 2521,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1991,
+      "area_ha": 76110,
+      "production_t": 215020,
+      "yield_kg_ha": 2825,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1992,
+      "area_ha": 98250,
+      "production_t": 299330,
+      "yield_kg_ha": 3047,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1993,
+      "area_ha": 96000,
+      "production_t": 307000,
+      "yield_kg_ha": 3198,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1994,
+      "area_ha": 91990,
+      "production_t": 290010,
+      "yield_kg_ha": 3153,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1995,
+      "area_ha": 55540,
+      "production_t": 75660,
+      "yield_kg_ha": 1362,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1996,
+      "area_ha": 82100,
+      "production_t": 216090,
+      "yield_kg_ha": 2632,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1997,
+      "area_ha": 88300,
+      "production_t": 242810,
+      "yield_kg_ha": 2750,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1998,
+      "area_ha": 99010,
+      "production_t": 312650,
+      "yield_kg_ha": 3158,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 1999,
+      "area_ha": 99110,
+      "production_t": 355510,
+      "yield_kg_ha": 3587,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2000,
+      "area_ha": 94790,
+      "production_t": 323090,
+      "yield_kg_ha": 3409,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2001,
+      "area_ha": 83500,
+      "production_t": 220600,
+      "yield_kg_ha": 2642,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2002,
+      "area_ha": 76440,
+      "production_t": 158380,
+      "yield_kg_ha": 2072,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2003,
+      "area_ha": 79770,
+      "production_t": 146600,
+      "yield_kg_ha": 1838,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2004,
+      "area_ha": 94030,
+      "production_t": 277280,
+      "yield_kg_ha": 2949,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2005,
+      "area_ha": 95990,
+      "production_t": 232570,
+      "yield_kg_ha": 2423,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2006,
+      "area_ha": 93370,
+      "production_t": 283990,
+      "yield_kg_ha": 3042,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2007,
+      "area_ha": 88670,
+      "production_t": 159550,
+      "yield_kg_ha": 1799,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2008,
+      "area_ha": 96390,
+      "production_t": 179770,
+      "yield_kg_ha": 1865,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2009,
+      "area_ha": 95300,
+      "production_t": 188450,
+      "yield_kg_ha": 1977,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2010,
+      "area_ha": 92900,
+      "production_t": 208870,
+      "yield_kg_ha": 2248,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2011,
+      "area_ha": 92590,
+      "production_t": 334260,
+      "yield_kg_ha": 3610,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2012,
+      "area_ha": 83590,
+      "production_t": 240390,
+      "yield_kg_ha": 2876,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2013,
+      "area_ha": 72650,
+      "production_t": 119900,
+      "yield_kg_ha": 1650,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2014,
+      "area_ha": 67240,
+      "production_t": 279130,
+      "yield_kg_ha": 4151,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "pudukkottai",
+      "year": 2015,
+      "area_ha": 73630,
+      "production_t": 258980,
+      "yield_kg_ha": 3517,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1990,
+      "area_ha": 151270,
+      "production_t": 263440,
+      "yield_kg_ha": 1742,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1991,
+      "area_ha": 137380,
+      "production_t": 69470,
+      "yield_kg_ha": 506,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1992,
+      "area_ha": 146340,
+      "production_t": 224910,
+      "yield_kg_ha": 1537,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1993,
+      "area_ha": 144000,
+      "production_t": 319000,
+      "yield_kg_ha": 2215,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1994,
+      "area_ha": 144740,
+      "production_t": 213840,
+      "yield_kg_ha": 1477,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1995,
+      "area_ha": 128380,
+      "production_t": 13030,
+      "yield_kg_ha": 101,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1996,
+      "area_ha": 132400,
+      "production_t": 148340,
+      "yield_kg_ha": 1120,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1997,
+      "area_ha": 144630,
+      "production_t": 480490,
+      "yield_kg_ha": 3322,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1998,
+      "area_ha": 132340,
+      "production_t": 377450,
+      "yield_kg_ha": 2852,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 1999,
+      "area_ha": 129880,
+      "production_t": 85200,
+      "yield_kg_ha": 656,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2000,
+      "area_ha": 124280,
+      "production_t": 237080,
+      "yield_kg_ha": 1908,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2001,
+      "area_ha": 124520,
+      "production_t": 169900,
+      "yield_kg_ha": 1364,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2002,
+      "area_ha": 126150,
+      "production_t": 159790,
+      "yield_kg_ha": 1267,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2003,
+      "area_ha": 121030,
+      "production_t": 20770,
+      "yield_kg_ha": 172,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2004,
+      "area_ha": 126610,
+      "production_t": 254700,
+      "yield_kg_ha": 2012,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2005,
+      "area_ha": 127400,
+      "production_t": 247080,
+      "yield_kg_ha": 1939,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2006,
+      "area_ha": 130420,
+      "production_t": 223190,
+      "yield_kg_ha": 1711,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2007,
+      "area_ha": 123770,
+      "production_t": 29880,
+      "yield_kg_ha": 241,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2008,
+      "area_ha": 128800,
+      "production_t": 202990,
+      "yield_kg_ha": 1576,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2009,
+      "area_ha": 133890,
+      "production_t": 234880,
+      "yield_kg_ha": 1754,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2010,
+      "area_ha": 131400,
+      "production_t": 254000,
+      "yield_kg_ha": 1933,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2011,
+      "area_ha": 128960,
+      "production_t": 438240,
+      "yield_kg_ha": 3398,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2012,
+      "area_ha": 116510,
+      "production_t": 68560,
+      "yield_kg_ha": 588,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2013,
+      "area_ha": 114980,
+      "production_t": 33930,
+      "yield_kg_ha": 295,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2014,
+      "area_ha": 116870,
+      "production_t": 423160,
+      "yield_kg_ha": 3621,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "ramanathapuram",
+      "year": 2015,
+      "area_ha": 116580,
+      "production_t": 303460,
+      "yield_kg_ha": 2603,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1990,
+      "area_ha": 30380,
+      "production_t": 101040,
+      "yield_kg_ha": 3326,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1991,
+      "area_ha": 67820,
+      "production_t": 229930,
+      "yield_kg_ha": 3390,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1992,
+      "area_ha": 56810,
+      "production_t": 191750,
+      "yield_kg_ha": 3375,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1993,
+      "area_ha": 75000,
+      "production_t": 242000,
+      "yield_kg_ha": 3227,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1994,
+      "area_ha": 67990,
+      "production_t": 236290,
+      "yield_kg_ha": 3475,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1995,
+      "area_ha": 66010,
+      "production_t": 227530,
+      "yield_kg_ha": 3447,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1996,
+      "area_ha": 45150,
+      "production_t": 169720,
+      "yield_kg_ha": 3759,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1997,
+      "area_ha": 46480,
+      "production_t": 187980,
+      "yield_kg_ha": 4044,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1998,
+      "area_ha": 48300,
+      "production_t": 213840,
+      "yield_kg_ha": 4427,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 1999,
+      "area_ha": 47050,
+      "production_t": 199430,
+      "yield_kg_ha": 4239,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2000,
+      "area_ha": 45960,
+      "production_t": 201220,
+      "yield_kg_ha": 4378,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2001,
+      "area_ha": 46230,
+      "production_t": 204300,
+      "yield_kg_ha": 4419,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2002,
+      "area_ha": 11060,
+      "production_t": 39590,
+      "yield_kg_ha": 3580,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2003,
+      "area_ha": 13590,
+      "production_t": 43650,
+      "yield_kg_ha": 3213,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2004,
+      "area_ha": 27300,
+      "production_t": 96630,
+      "yield_kg_ha": 3539,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2005,
+      "area_ha": 37330,
+      "production_t": 137290,
+      "yield_kg_ha": 3678,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2006,
+      "area_ha": 27480,
+      "production_t": 99810,
+      "yield_kg_ha": 3632,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2007,
+      "area_ha": 21710,
+      "production_t": 72080,
+      "yield_kg_ha": 3320,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2008,
+      "area_ha": 29930,
+      "production_t": 120380,
+      "yield_kg_ha": 4022,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2009,
+      "area_ha": 24380,
+      "production_t": 106460,
+      "yield_kg_ha": 4366,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2010,
+      "area_ha": 33300,
+      "production_t": 147780,
+      "yield_kg_ha": 4438,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2011,
+      "area_ha": 27750,
+      "production_t": 125330,
+      "yield_kg_ha": 4517,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2012,
+      "area_ha": 12930,
+      "production_t": 52950,
+      "yield_kg_ha": 4096,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2013,
+      "area_ha": 20150,
+      "production_t": 97050,
+      "yield_kg_ha": 4816,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2014,
+      "area_ha": 19340,
+      "production_t": 102750,
+      "yield_kg_ha": 5313,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "salem",
+      "year": 2015,
+      "area_ha": 24710,
+      "production_t": 122540,
+      "yield_kg_ha": 4959,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1990,
+      "area_ha": 89340,
+      "production_t": 203120,
+      "yield_kg_ha": 2274,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1991,
+      "area_ha": 85600,
+      "production_t": 153640,
+      "yield_kg_ha": 1795,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1992,
+      "area_ha": 97060,
+      "production_t": 257350,
+      "yield_kg_ha": 2651,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1993,
+      "area_ha": 96000,
+      "production_t": 261000,
+      "yield_kg_ha": 2719,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1994,
+      "area_ha": 99820,
+      "production_t": 261460,
+      "yield_kg_ha": 2619,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1995,
+      "area_ha": 72060,
+      "production_t": 57950,
+      "yield_kg_ha": 804,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1996,
+      "area_ha": 81880,
+      "production_t": 161170,
+      "yield_kg_ha": 1968,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1997,
+      "area_ha": 90930,
+      "production_t": 221560,
+      "yield_kg_ha": 2437,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1998,
+      "area_ha": 96880,
+      "production_t": 298590,
+      "yield_kg_ha": 3082,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 1999,
+      "area_ha": 88080,
+      "production_t": 168860,
+      "yield_kg_ha": 1917,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2000,
+      "area_ha": 83950,
+      "production_t": 218280,
+      "yield_kg_ha": 2600,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2001,
+      "area_ha": 77250,
+      "production_t": 159610,
+      "yield_kg_ha": 2066,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2002,
+      "area_ha": 79740,
+      "production_t": 139340,
+      "yield_kg_ha": 1747,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2003,
+      "area_ha": 71960,
+      "production_t": 49830,
+      "yield_kg_ha": 693,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2004,
+      "area_ha": 85140,
+      "production_t": 179540,
+      "yield_kg_ha": 2109,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2005,
+      "area_ha": 89920,
+      "production_t": 192740,
+      "yield_kg_ha": 2143,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2006,
+      "area_ha": 81390,
+      "production_t": 109450,
+      "yield_kg_ha": 1345,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2007,
+      "area_ha": 76730,
+      "production_t": 78940,
+      "yield_kg_ha": 1029,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2008,
+      "area_ha": 80830,
+      "production_t": 132140,
+      "yield_kg_ha": 1635,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2009,
+      "area_ha": 77330,
+      "production_t": 138100,
+      "yield_kg_ha": 1786,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2010,
+      "area_ha": 83930,
+      "production_t": 188420,
+      "yield_kg_ha": 2245,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2011,
+      "area_ha": 83780,
+      "production_t": 310180,
+      "yield_kg_ha": 3702,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2012,
+      "area_ha": 70630,
+      "production_t": 130310,
+      "yield_kg_ha": 1845,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2013,
+      "area_ha": 65450,
+      "production_t": 46080,
+      "yield_kg_ha": 704,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2014,
+      "area_ha": 65090,
+      "production_t": 224880,
+      "yield_kg_ha": 3455,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "sivaganga",
+      "year": 2015,
+      "area_ha": 67210,
+      "production_t": 189480,
+      "yield_kg_ha": 2819,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1990,
+      "area_ha": 459420,
+      "production_t": 1403460,
+      "yield_kg_ha": 3055,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1991,
+      "area_ha": 471620,
+      "production_t": 1575310,
+      "yield_kg_ha": 3340,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1992,
+      "area_ha": 222220,
+      "production_t": 727980,
+      "yield_kg_ha": 3276,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1993,
+      "area_ha": 222000,
+      "production_t": 562000,
+      "yield_kg_ha": 2532,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1994,
+      "area_ha": 210360,
+      "production_t": 669310,
+      "yield_kg_ha": 3182,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1995,
+      "area_ha": 188800,
+      "production_t": 528500,
+      "yield_kg_ha": 2799,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1996,
+      "area_ha": 167110,
+      "production_t": 427370,
+      "yield_kg_ha": 2557,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1997,
+      "area_ha": 181500,
+      "production_t": 489770,
+      "yield_kg_ha": 2699,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1998,
+      "area_ha": 184490,
+      "production_t": 580520,
+      "yield_kg_ha": 3147,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 1999,
+      "area_ha": 188910,
+      "production_t": 654200,
+      "yield_kg_ha": 3463,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2000,
+      "area_ha": 191800,
+      "production_t": 719000,
+      "yield_kg_ha": 3749,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2001,
+      "area_ha": 192160,
+      "production_t": 561650,
+      "yield_kg_ha": 2923,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2002,
+      "area_ha": 139190,
+      "production_t": 318330,
+      "yield_kg_ha": 2287,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2003,
+      "area_ha": 123290,
+      "production_t": 354940,
+      "yield_kg_ha": 2879,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2004,
+      "area_ha": 160610,
+      "production_t": 439320,
+      "yield_kg_ha": 2735,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2005,
+      "area_ha": 154900,
+      "production_t": 399480,
+      "yield_kg_ha": 2579,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2006,
+      "area_ha": 164240,
+      "production_t": 598160,
+      "yield_kg_ha": 3642,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2007,
+      "area_ha": 150230,
+      "production_t": 479640,
+      "yield_kg_ha": 3193,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2008,
+      "area_ha": 177090,
+      "production_t": 357160,
+      "yield_kg_ha": 2017,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2009,
+      "area_ha": 162940,
+      "production_t": 427140,
+      "yield_kg_ha": 2622,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2010,
+      "area_ha": 166210,
+      "production_t": 476790,
+      "yield_kg_ha": 2869,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2011,
+      "area_ha": 180860,
+      "production_t": 722580,
+      "yield_kg_ha": 3995,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2012,
+      "area_ha": 146960,
+      "production_t": 431120,
+      "yield_kg_ha": 2934,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2013,
+      "area_ha": 167290,
+      "production_t": 831480,
+      "yield_kg_ha": 4970,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2014,
+      "area_ha": 177760,
+      "production_t": 696190,
+      "yield_kg_ha": 3916,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thanjavur",
+      "year": 2015,
+      "area_ha": 177430,
+      "production_t": 637000,
+      "yield_kg_ha": 3590,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 1996,
+      "area_ha": 19030,
+      "production_t": 67940,
+      "yield_kg_ha": 3570,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 1997,
+      "area_ha": 19830,
+      "production_t": 61810,
+      "yield_kg_ha": 3117,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 1998,
+      "area_ha": 18580,
+      "production_t": 69670,
+      "yield_kg_ha": 3749,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 1999,
+      "area_ha": 18480,
+      "production_t": 73090,
+      "yield_kg_ha": 3954,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2000,
+      "area_ha": 18210,
+      "production_t": 80820,
+      "yield_kg_ha": 4437,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2001,
+      "area_ha": 17420,
+      "production_t": 77880,
+      "yield_kg_ha": 4470,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2002,
+      "area_ha": 13780,
+      "production_t": 54950,
+      "yield_kg_ha": 3987,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2003,
+      "area_ha": 14230,
+      "production_t": 55230,
+      "yield_kg_ha": 3882,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2004,
+      "area_ha": 16640,
+      "production_t": 67090,
+      "yield_kg_ha": 4033,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2005,
+      "area_ha": 15690,
+      "production_t": 65290,
+      "yield_kg_ha": 4160,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2006,
+      "area_ha": 14920,
+      "production_t": 64210,
+      "yield_kg_ha": 4305,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2007,
+      "area_ha": 14400,
+      "production_t": 61660,
+      "yield_kg_ha": 4282,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2008,
+      "area_ha": 15580,
+      "production_t": 80290,
+      "yield_kg_ha": 5154,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2009,
+      "area_ha": 15370,
+      "production_t": 77710,
+      "yield_kg_ha": 5056,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2010,
+      "area_ha": 15360,
+      "production_t": 74010,
+      "yield_kg_ha": 4820,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2011,
+      "area_ha": 14740,
+      "production_t": 79130,
+      "yield_kg_ha": 5370,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2012,
+      "area_ha": 10320,
+      "production_t": 47640,
+      "yield_kg_ha": 4615,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2013,
+      "area_ha": 12500,
+      "production_t": 50810,
+      "yield_kg_ha": 4065,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2014,
+      "area_ha": 13840,
+      "production_t": 71900,
+      "yield_kg_ha": 5195,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "theni",
+      "year": 2015,
+      "area_ha": 14630,
+      "production_t": 79370,
+      "yield_kg_ha": 5425,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 1996,
+      "area_ha": 107080,
+      "production_t": 322030,
+      "yield_kg_ha": 3007,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 1997,
+      "area_ha": 111900,
+      "production_t": 434770,
+      "yield_kg_ha": 3886,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 1998,
+      "area_ha": 120130,
+      "production_t": 471020,
+      "yield_kg_ha": 3921,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 1999,
+      "area_ha": 110970,
+      "production_t": 433650,
+      "yield_kg_ha": 3908,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2000,
+      "area_ha": 93060,
+      "production_t": 329300,
+      "yield_kg_ha": 3539,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2001,
+      "area_ha": 94420,
+      "production_t": 321610,
+      "yield_kg_ha": 3406,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2002,
+      "area_ha": 87760,
+      "production_t": 279520,
+      "yield_kg_ha": 3185,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2003,
+      "area_ha": 74940,
+      "production_t": 195540,
+      "yield_kg_ha": 2609,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2004,
+      "area_ha": 66730,
+      "production_t": 199890,
+      "yield_kg_ha": 2995,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2005,
+      "area_ha": 96990,
+      "production_t": 271580,
+      "yield_kg_ha": 2800,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2006,
+      "area_ha": 89670,
+      "production_t": 318470,
+      "yield_kg_ha": 3552,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2007,
+      "area_ha": 78710,
+      "production_t": 286010,
+      "yield_kg_ha": 3634,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2008,
+      "area_ha": 82240,
+      "production_t": 315860,
+      "yield_kg_ha": 3841,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2009,
+      "area_ha": 80940,
+      "production_t": 256290,
+      "yield_kg_ha": 3166,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2010,
+      "area_ha": 83220,
+      "production_t": 250210,
+      "yield_kg_ha": 3007,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2011,
+      "area_ha": 79220,
+      "production_t": 313040,
+      "yield_kg_ha": 3952,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2012,
+      "area_ha": 78340,
+      "production_t": 300460,
+      "yield_kg_ha": 3835,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2013,
+      "area_ha": 95830,
+      "production_t": 451520,
+      "yield_kg_ha": 4712,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2014,
+      "area_ha": 96350,
+      "production_t": 426200,
+      "yield_kg_ha": 4423,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvallur",
+      "year": 2015,
+      "area_ha": 101400,
+      "production_t": 333200,
+      "yield_kg_ha": 3286,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 1996,
+      "area_ha": 155370,
+      "production_t": 238830,
+      "yield_kg_ha": 1537,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 1997,
+      "area_ha": 168210,
+      "production_t": 285510,
+      "yield_kg_ha": 1697,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 1998,
+      "area_ha": 159650,
+      "production_t": 477070,
+      "yield_kg_ha": 2988,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 1999,
+      "area_ha": 163600,
+      "production_t": 490800,
+      "yield_kg_ha": 3000,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2000,
+      "area_ha": 174260,
+      "production_t": 661460,
+      "yield_kg_ha": 3796,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2001,
+      "area_ha": 174720,
+      "production_t": 460110,
+      "yield_kg_ha": 2633,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2002,
+      "area_ha": 131060,
+      "production_t": 112180,
+      "yield_kg_ha": 856,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2003,
+      "area_ha": 121440,
+      "production_t": 169430,
+      "yield_kg_ha": 1395,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2004,
+      "area_ha": 148610,
+      "production_t": 239810,
+      "yield_kg_ha": 1614,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2005,
+      "area_ha": 156100,
+      "production_t": 243450,
+      "yield_kg_ha": 1560,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2006,
+      "area_ha": 176900,
+      "production_t": 586380,
+      "yield_kg_ha": 3315,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2007,
+      "area_ha": 151630,
+      "production_t": 311310,
+      "yield_kg_ha": 2053,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2008,
+      "area_ha": 178040,
+      "production_t": 206610,
+      "yield_kg_ha": 1160,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2009,
+      "area_ha": 166250,
+      "production_t": 483130,
+      "yield_kg_ha": 2906,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2010,
+      "area_ha": 160240,
+      "production_t": 285590,
+      "yield_kg_ha": 1782,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2011,
+      "area_ha": 86730,
+      "production_t": 459400,
+      "yield_kg_ha": 5297,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2012,
+      "area_ha": 158900,
+      "production_t": 192840,
+      "yield_kg_ha": 1214,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2013,
+      "area_ha": 174370,
+      "production_t": 820540,
+      "yield_kg_ha": 4706,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2014,
+      "area_ha": 192620,
+      "production_t": 852930,
+      "yield_kg_ha": 4428,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thiruvarur",
+      "year": 2015,
+      "area_ha": 194740,
+      "production_t": 666960,
+      "yield_kg_ha": 3425,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1990,
+      "area_ha": 28790,
+      "production_t": 136000,
+      "yield_kg_ha": 4724,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1991,
+      "area_ha": 31950,
+      "production_t": 109120,
+      "yield_kg_ha": 3415,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1992,
+      "area_ha": 27030,
+      "production_t": 102120,
+      "yield_kg_ha": 3778,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1993,
+      "area_ha": 28000,
+      "production_t": 106000,
+      "yield_kg_ha": 3786,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1994,
+      "area_ha": 30120,
+      "production_t": 122850,
+      "yield_kg_ha": 4079,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1995,
+      "area_ha": 22640,
+      "production_t": 93970,
+      "yield_kg_ha": 4152,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1996,
+      "area_ha": 14410,
+      "production_t": 61010,
+      "yield_kg_ha": 4234,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1997,
+      "area_ha": 17910,
+      "production_t": 78650,
+      "yield_kg_ha": 4392,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1998,
+      "area_ha": 21720,
+      "production_t": 96920,
+      "yield_kg_ha": 4462,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 1999,
+      "area_ha": 17600,
+      "production_t": 79060,
+      "yield_kg_ha": 4492,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2000,
+      "area_ha": 15620,
+      "production_t": 67970,
+      "yield_kg_ha": 4351,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2001,
+      "area_ha": 10200,
+      "production_t": 42780,
+      "yield_kg_ha": 4194,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2002,
+      "area_ha": 14720,
+      "production_t": 64500,
+      "yield_kg_ha": 4381,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2003,
+      "area_ha": 13540,
+      "production_t": 56890,
+      "yield_kg_ha": 4201,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2004,
+      "area_ha": 16420,
+      "production_t": 67930,
+      "yield_kg_ha": 4138,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2005,
+      "area_ha": 19930,
+      "production_t": 81820,
+      "yield_kg_ha": 4105,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2006,
+      "area_ha": 21380,
+      "production_t": 94000,
+      "yield_kg_ha": 4397,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2007,
+      "area_ha": 18060,
+      "production_t": 64740,
+      "yield_kg_ha": 3585,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2008,
+      "area_ha": 22400,
+      "production_t": 108160,
+      "yield_kg_ha": 4828,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2009,
+      "area_ha": 19550,
+      "production_t": 96680,
+      "yield_kg_ha": 4945,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2010,
+      "area_ha": 20010,
+      "production_t": 89440,
+      "yield_kg_ha": 4471,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2011,
+      "area_ha": 103920,
+      "production_t": 356200,
+      "yield_kg_ha": 3427,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2012,
+      "area_ha": 6230,
+      "production_t": 24380,
+      "yield_kg_ha": 3910,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2013,
+      "area_ha": 11730,
+      "production_t": 55450,
+      "yield_kg_ha": 4727,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2014,
+      "area_ha": 16280,
+      "production_t": 84110,
+      "yield_kg_ha": 5166,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "thoothukkudi",
+      "year": 2015,
+      "area_ha": 18560,
+      "production_t": 74560,
+      "yield_kg_ha": 4017,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1990,
+      "area_ha": 92680,
+      "production_t": 299420,
+      "yield_kg_ha": 3231,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1991,
+      "area_ha": 113850,
+      "production_t": 416960,
+      "yield_kg_ha": 3662,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1992,
+      "area_ha": 142700,
+      "production_t": 475390,
+      "yield_kg_ha": 3331,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1993,
+      "area_ha": 136000,
+      "production_t": 432000,
+      "yield_kg_ha": 3176,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1994,
+      "area_ha": 139720,
+      "production_t": 480720,
+      "yield_kg_ha": 3441,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1995,
+      "area_ha": 119890,
+      "production_t": 341380,
+      "yield_kg_ha": 2847,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1996,
+      "area_ha": 58580,
+      "production_t": 179680,
+      "yield_kg_ha": 3067,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1997,
+      "area_ha": 67730,
+      "production_t": 223530,
+      "yield_kg_ha": 3300,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1998,
+      "area_ha": 74090,
+      "production_t": 316520,
+      "yield_kg_ha": 4272,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 1999,
+      "area_ha": 80910,
+      "production_t": 354670,
+      "yield_kg_ha": 4384,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2000,
+      "area_ha": 81180,
+      "production_t": 316770,
+      "yield_kg_ha": 3902,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2001,
+      "area_ha": 72320,
+      "production_t": 296510,
+      "yield_kg_ha": 4100,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2002,
+      "area_ha": 51750,
+      "production_t": 154950,
+      "yield_kg_ha": 2994,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2003,
+      "area_ha": 42930,
+      "production_t": 126080,
+      "yield_kg_ha": 2937,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2004,
+      "area_ha": 62180,
+      "production_t": 205400,
+      "yield_kg_ha": 3303,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2005,
+      "area_ha": 79580,
+      "production_t": 236740,
+      "yield_kg_ha": 2975,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2006,
+      "area_ha": 71720,
+      "production_t": 282440,
+      "yield_kg_ha": 3938,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2007,
+      "area_ha": 61290,
+      "production_t": 227330,
+      "yield_kg_ha": 3709,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2008,
+      "area_ha": 72530,
+      "production_t": 262380,
+      "yield_kg_ha": 3618,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2009,
+      "area_ha": 64300,
+      "production_t": 266270,
+      "yield_kg_ha": 4141,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2010,
+      "area_ha": 67170,
+      "production_t": 268140,
+      "yield_kg_ha": 3992,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2011,
+      "area_ha": 63940,
+      "production_t": 302480,
+      "yield_kg_ha": 4731,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2012,
+      "area_ha": 45240,
+      "production_t": 138080,
+      "yield_kg_ha": 3052,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2013,
+      "area_ha": 48050,
+      "production_t": 226630,
+      "yield_kg_ha": 4717,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2014,
+      "area_ha": 51270,
+      "production_t": 240200,
+      "yield_kg_ha": 4685,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruchirappalli",
+      "year": 2015,
+      "area_ha": 58570,
+      "production_t": 244210,
+      "yield_kg_ha": 4170,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1990,
+      "area_ha": 101400,
+      "production_t": 398260,
+      "yield_kg_ha": 3928,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1991,
+      "area_ha": 98980,
+      "production_t": 319120,
+      "yield_kg_ha": 3224,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1992,
+      "area_ha": 103610,
+      "production_t": 420350,
+      "yield_kg_ha": 4057,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1993,
+      "area_ha": 103000,
+      "production_t": 390000,
+      "yield_kg_ha": 3786,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1994,
+      "area_ha": 102360,
+      "production_t": 488420,
+      "yield_kg_ha": 4772,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1995,
+      "area_ha": 79500,
+      "production_t": 330800,
+      "yield_kg_ha": 4161,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1996,
+      "area_ha": 68040,
+      "production_t": 264550,
+      "yield_kg_ha": 3888,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1997,
+      "area_ha": 88780,
+      "production_t": 325650,
+      "yield_kg_ha": 3668,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1998,
+      "area_ha": 91780,
+      "production_t": 413410,
+      "yield_kg_ha": 4504,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 1999,
+      "area_ha": 86320,
+      "production_t": 390670,
+      "yield_kg_ha": 4526,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2000,
+      "area_ha": 76290,
+      "production_t": 338960,
+      "yield_kg_ha": 4443,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2001,
+      "area_ha": 71980,
+      "production_t": 290130,
+      "yield_kg_ha": 4031,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2002,
+      "area_ha": 66210,
+      "production_t": 266290,
+      "yield_kg_ha": 4022,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2003,
+      "area_ha": 52470,
+      "production_t": 197850,
+      "yield_kg_ha": 3770,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2004,
+      "area_ha": 86830,
+      "production_t": 358920,
+      "yield_kg_ha": 4133,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2005,
+      "area_ha": 86400,
+      "production_t": 309070,
+      "yield_kg_ha": 3577,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2006,
+      "area_ha": 91880,
+      "production_t": 385280,
+      "yield_kg_ha": 4193,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2007,
+      "area_ha": 83710,
+      "production_t": 323940,
+      "yield_kg_ha": 3870,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2008,
+      "area_ha": 91320,
+      "production_t": 374210,
+      "yield_kg_ha": 4098,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2009,
+      "area_ha": 85990,
+      "production_t": 355880,
+      "yield_kg_ha": 4138,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2010,
+      "area_ha": 79760,
+      "production_t": 351820,
+      "yield_kg_ha": 4411,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2011,
+      "area_ha": 17680,
+      "production_t": 85770,
+      "yield_kg_ha": 4852,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2012,
+      "area_ha": 45400,
+      "production_t": 182670,
+      "yield_kg_ha": 4023,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2013,
+      "area_ha": 62280,
+      "production_t": 362990,
+      "yield_kg_ha": 5828,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2014,
+      "area_ha": 84820,
+      "production_t": 433220,
+      "yield_kg_ha": 5108,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tirunelveli",
+      "year": 2015,
+      "area_ha": 98510,
+      "production_t": 488450,
+      "yield_kg_ha": 4958,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2008,
+      "area_ha": 11060,
+      "production_t": 20640,
+      "yield_kg_ha": 1866,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2009,
+      "area_ha": 11960,
+      "production_t": 50180,
+      "yield_kg_ha": 4196,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2010,
+      "area_ha": 11800,
+      "production_t": 46950,
+      "yield_kg_ha": 3979,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2011,
+      "area_ha": 10610,
+      "production_t": 48940,
+      "yield_kg_ha": 4611,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2012,
+      "area_ha": 250,
+      "production_t": 600,
+      "yield_kg_ha": 2465,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2013,
+      "area_ha": 7510,
+      "production_t": 43380,
+      "yield_kg_ha": 5776,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2014,
+      "area_ha": 10780,
+      "production_t": 61920,
+      "yield_kg_ha": 5744,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruppur",
+      "year": 2015,
+      "area_ha": 10650,
+      "production_t": 48170,
+      "yield_kg_ha": 4523,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1990,
+      "area_ha": 53320,
+      "production_t": 164540,
+      "yield_kg_ha": 3086,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1991,
+      "area_ha": 106900,
+      "production_t": 326990,
+      "yield_kg_ha": 3059,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1992,
+      "area_ha": 91930,
+      "production_t": 211470,
+      "yield_kg_ha": 2300,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1993,
+      "area_ha": 98000,
+      "production_t": 257000,
+      "yield_kg_ha": 2622,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1994,
+      "area_ha": 108120,
+      "production_t": 344430,
+      "yield_kg_ha": 3186,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1995,
+      "area_ha": 101450,
+      "production_t": 262680,
+      "yield_kg_ha": 2589,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1996,
+      "area_ha": 146540,
+      "production_t": 384010,
+      "yield_kg_ha": 2620,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1997,
+      "area_ha": 142220,
+      "production_t": 405680,
+      "yield_kg_ha": 2852,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1998,
+      "area_ha": 146250,
+      "production_t": 484400,
+      "yield_kg_ha": 3312,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 1999,
+      "area_ha": 97390,
+      "production_t": 303010,
+      "yield_kg_ha": 3111,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2000,
+      "area_ha": 81750,
+      "production_t": 247220,
+      "yield_kg_ha": 3024,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2001,
+      "area_ha": 122690,
+      "production_t": 370960,
+      "yield_kg_ha": 3024,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2002,
+      "area_ha": 43870,
+      "production_t": 115450,
+      "yield_kg_ha": 2632,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2003,
+      "area_ha": 70720,
+      "production_t": 198450,
+      "yield_kg_ha": 2806,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2004,
+      "area_ha": 116820,
+      "production_t": 330490,
+      "yield_kg_ha": 2829,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2005,
+      "area_ha": 142740,
+      "production_t": 393530,
+      "yield_kg_ha": 2757,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2006,
+      "area_ha": 111460,
+      "production_t": 366050,
+      "yield_kg_ha": 3284,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2007,
+      "area_ha": 112150,
+      "production_t": 385910,
+      "yield_kg_ha": 3441,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2008,
+      "area_ha": 101890,
+      "production_t": 317940,
+      "yield_kg_ha": 3121,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2009,
+      "area_ha": 105180,
+      "production_t": 324980,
+      "yield_kg_ha": 3090,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2010,
+      "area_ha": 125490,
+      "production_t": 357690,
+      "yield_kg_ha": 2850,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2011,
+      "area_ha": 63940,
+      "production_t": 302480,
+      "yield_kg_ha": 4731,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2012,
+      "area_ha": 91770,
+      "production_t": 325510,
+      "yield_kg_ha": 3547,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2013,
+      "area_ha": 82630,
+      "production_t": 359400,
+      "yield_kg_ha": 4350,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2014,
+      "area_ha": 93130,
+      "production_t": 439230,
+      "yield_kg_ha": 4716,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "tiruvannamalai",
+      "year": 2015,
+      "area_ha": 138880,
+      "production_t": 550740,
+      "yield_kg_ha": 3966,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1990,
+      "area_ha": 34570,
+      "production_t": 100850,
+      "yield_kg_ha": 2917,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1991,
+      "area_ha": 70440,
+      "production_t": 223100,
+      "yield_kg_ha": 3167,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1992,
+      "area_ha": 48500,
+      "production_t": 107950,
+      "yield_kg_ha": 2226,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1993,
+      "area_ha": 70000,
+      "production_t": 185000,
+      "yield_kg_ha": 2643,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1994,
+      "area_ha": 52680,
+      "production_t": 146060,
+      "yield_kg_ha": 2773,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1995,
+      "area_ha": 60520,
+      "production_t": 168730,
+      "yield_kg_ha": 2788,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1996,
+      "area_ha": 86850,
+      "production_t": 260570,
+      "yield_kg_ha": 3000,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1997,
+      "area_ha": 71610,
+      "production_t": 236910,
+      "yield_kg_ha": 3308,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1998,
+      "area_ha": 77130,
+      "production_t": 295870,
+      "yield_kg_ha": 3836,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 1999,
+      "area_ha": 49870,
+      "production_t": 217180,
+      "yield_kg_ha": 4355,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2000,
+      "area_ha": 52330,
+      "production_t": 211440,
+      "yield_kg_ha": 4040,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2001,
+      "area_ha": 60110,
+      "production_t": 234130,
+      "yield_kg_ha": 3895,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2002,
+      "area_ha": 26290,
+      "production_t": 89860,
+      "yield_kg_ha": 3419,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2003,
+      "area_ha": 30910,
+      "production_t": 108170,
+      "yield_kg_ha": 3500,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2004,
+      "area_ha": 29400,
+      "production_t": 90150,
+      "yield_kg_ha": 3066,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2005,
+      "area_ha": 58160,
+      "production_t": 167450,
+      "yield_kg_ha": 2879,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2006,
+      "area_ha": 41690,
+      "production_t": 129190,
+      "yield_kg_ha": 3099,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2007,
+      "area_ha": 44330,
+      "production_t": 148370,
+      "yield_kg_ha": 3347,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2008,
+      "area_ha": 47420,
+      "production_t": 171870,
+      "yield_kg_ha": 3625,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2009,
+      "area_ha": 39770,
+      "production_t": 135830,
+      "yield_kg_ha": 3416,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2010,
+      "area_ha": 43220,
+      "production_t": 152830,
+      "yield_kg_ha": 3536,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2011,
+      "area_ha": 37990,
+      "production_t": 151270,
+      "yield_kg_ha": 3982,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2012,
+      "area_ha": 35710,
+      "production_t": 152800,
+      "yield_kg_ha": 4279,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2013,
+      "area_ha": 39370,
+      "production_t": 192500,
+      "yield_kg_ha": 4890,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2014,
+      "area_ha": 36580,
+      "production_t": 194730,
+      "yield_kg_ha": 5323,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "vellore",
+      "year": 2015,
+      "area_ha": 51770,
+      "production_t": 202220,
+      "yield_kg_ha": 3906,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 1994,
+      "area_ha": 132360,
+      "production_t": 455330,
+      "yield_kg_ha": 3440,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 1995,
+      "area_ha": 119210,
+      "production_t": 421830,
+      "yield_kg_ha": 3539,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 1996,
+      "area_ha": 186240,
+      "production_t": 557860,
+      "yield_kg_ha": 2995,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 1997,
+      "area_ha": 178160,
+      "production_t": 566360,
+      "yield_kg_ha": 3179,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 1998,
+      "area_ha": 174830,
+      "production_t": 639740,
+      "yield_kg_ha": 3659,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 1999,
+      "area_ha": 158640,
+      "production_t": 561580,
+      "yield_kg_ha": 3540,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2000,
+      "area_ha": 153510,
+      "production_t": 510620,
+      "yield_kg_ha": 3326,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2001,
+      "area_ha": 155560,
+      "production_t": 561130,
+      "yield_kg_ha": 3607,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2002,
+      "area_ha": 80630,
+      "production_t": 241290,
+      "yield_kg_ha": 2993,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2003,
+      "area_ha": 75280,
+      "production_t": 234750,
+      "yield_kg_ha": 3118,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2004,
+      "area_ha": 163700,
+      "production_t": 525850,
+      "yield_kg_ha": 3212,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2005,
+      "area_ha": 168440,
+      "production_t": 511930,
+      "yield_kg_ha": 3039,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2006,
+      "area_ha": 144780,
+      "production_t": 496110,
+      "yield_kg_ha": 3427,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2007,
+      "area_ha": 145400,
+      "production_t": 480330,
+      "yield_kg_ha": 3303,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2008,
+      "area_ha": 146640,
+      "production_t": 451140,
+      "yield_kg_ha": 3076,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2009,
+      "area_ha": 148450,
+      "production_t": 467830,
+      "yield_kg_ha": 3151,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2010,
+      "area_ha": 149930,
+      "production_t": 512010,
+      "yield_kg_ha": 3415,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2011,
+      "area_ha": 129860,
+      "production_t": 471620,
+      "yield_kg_ha": 3632,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2012,
+      "area_ha": 115590,
+      "production_t": 396530,
+      "yield_kg_ha": 3430,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2013,
+      "area_ha": 170440,
+      "production_t": 796610,
+      "yield_kg_ha": 4674,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2014,
+      "area_ha": 171480,
+      "production_t": 832590,
+      "yield_kg_ha": 4855,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "viluppuram",
+      "year": 2015,
+      "area_ha": 182300,
+      "production_t": 773310,
+      "yield_kg_ha": 4242,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1990,
+      "area_ha": 36780,
+      "production_t": 123490,
+      "yield_kg_ha": 3358,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1991,
+      "area_ha": 21680,
+      "production_t": 47200,
+      "yield_kg_ha": 2177,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1992,
+      "area_ha": 34270,
+      "production_t": 108690,
+      "yield_kg_ha": 3172,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1993,
+      "area_ha": 39000,
+      "production_t": 164000,
+      "yield_kg_ha": 4205,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1994,
+      "area_ha": 36740,
+      "production_t": 87080,
+      "yield_kg_ha": 2370,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1995,
+      "area_ha": 17420,
+      "production_t": 16840,
+      "yield_kg_ha": 967,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1996,
+      "area_ha": 28910,
+      "production_t": 81890,
+      "yield_kg_ha": 2833,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1997,
+      "area_ha": 36210,
+      "production_t": 112240,
+      "yield_kg_ha": 3100,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1998,
+      "area_ha": 37070,
+      "production_t": 155040,
+      "yield_kg_ha": 4183,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 1999,
+      "area_ha": 32560,
+      "production_t": 131070,
+      "yield_kg_ha": 4026,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2000,
+      "area_ha": 26010,
+      "production_t": 73060,
+      "yield_kg_ha": 2808,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2001,
+      "area_ha": 29390,
+      "production_t": 92270,
+      "yield_kg_ha": 3140,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2002,
+      "area_ha": 31610,
+      "production_t": 86660,
+      "yield_kg_ha": 2742,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2003,
+      "area_ha": 24140,
+      "production_t": 43980,
+      "yield_kg_ha": 1822,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2004,
+      "area_ha": 29710,
+      "production_t": 86990,
+      "yield_kg_ha": 2928,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2005,
+      "area_ha": 30780,
+      "production_t": 98480,
+      "yield_kg_ha": 3200,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2006,
+      "area_ha": 32740,
+      "production_t": 158210,
+      "yield_kg_ha": 4833,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2007,
+      "area_ha": 28210,
+      "production_t": 93090,
+      "yield_kg_ha": 3300,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2008,
+      "area_ha": 32500,
+      "production_t": 104590,
+      "yield_kg_ha": 3218,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2009,
+      "area_ha": 26620,
+      "production_t": 64720,
+      "yield_kg_ha": 2431,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2010,
+      "area_ha": 30570,
+      "production_t": 94520,
+      "yield_kg_ha": 3092,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2011,
+      "area_ha": 29660,
+      "production_t": 118470,
+      "yield_kg_ha": 3995,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2012,
+      "area_ha": 22970,
+      "production_t": 40470,
+      "yield_kg_ha": 1762,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2013,
+      "area_ha": 16470,
+      "production_t": 68150,
+      "yield_kg_ha": 4138,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2014,
+      "area_ha": 19610,
+      "production_t": 81410,
+      "yield_kg_ha": 4151,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    },
+    {
+      "district": "virudhunagar",
+      "year": 2015,
+      "area_ha": 28610,
+      "production_t": 100610,
+      "yield_kg_ha": 3517,
+      "source_file": "icrisat_dld_560_1990_2015_wide.csv"
+    }
+  ]
+}

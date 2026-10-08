@@ -2,8 +2,12 @@
  * Observed (real) climate inputs.
  *  - ONI: bundled NOAA snapshot (oni.ts), replaced by a fresher copy when climate.json has one.
  *  - District rainfall & temperature: climate.json, written by `npm run fetch:climate` (NASA POWER).
+ *  - Seasonal history (1991–2026): seasonal.json, written by `npm run build:seasonal`.
+ *  - Backtest: validation.json, written by `npm run backtest`. Shows "not run" until the pipeline has been run.
  */
 import raw from './climate.json';
+import seasonalRaw from './seasonal.json';
+import validationRaw from './validation.json';
 import { ONI_TABLE, ONI_SOURCE, latestOni, oniMonthly, seasonName } from './oni';
 
 export interface DistrictObs {
@@ -57,3 +61,75 @@ export const WEATHER = HAS_WEATHER
 
 const fmtDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 export const WEATHER_WINDOW_LABEL = WEATHER ? `${fmtDate(WEATHER.windowStart)} – ${fmtDate(WEATHER.windowEnd)}` : '';
+
+/* ---------- Seasonal history (scripts/build-seasonal.mjs) ---------- */
+
+export interface SeasonalDistrict {
+  complete: boolean;
+  rain_mm?: number; rain_anom_pct?: number;
+  t_mean?: number; temp_anom_c?: number;
+  extreme_days?: number; max_dry_spell?: number;
+}
+export interface SeasonalFile {
+  status: 'ok' | 'not_run';
+  message?: string;
+  generatedAt?: string;
+  source?: string;
+  window?: string;
+  baseline?: { period: string; minCompleteYears: number; method: string };
+  definitions?: { heavyRainMm: number; dryDayMm: number; completeness: string };
+  latestCompleteYear?: number | null;
+  districtBaseline?: Record<string, { rain_mm: number; t_mean: number; complete_years: number }>;
+  years: Record<string, {
+    districts_complete: number;
+    state: { rain_anom_pct: number; temp_anom_c: number } | null;
+    districts: Record<string, SeasonalDistrict>;
+  }>;
+}
+
+export const SEASONAL = seasonalRaw as unknown as SeasonalFile;
+export const HAS_SEASONAL = SEASONAL.status === 'ok';
+
+/* ---------- Backtest (scripts/backtest.mjs) ---------- */
+
+export interface ValidationMetrics {
+  outOfSamplePairs: number; districts: number; years: number;
+  pearson_r: number | null; spearman_rho: number | null;
+  mae_pct: number | null; rmse_pct: number | null;
+  naive_mae_pct: number | null; skill_vs_zero: number | null;
+  lossYears: number; flaggedYears: number;
+  lossRecall: number | null; lossPrecision: number | null;
+}
+export interface ValidationEvent {
+  id: string; label: string; year: number;
+  statewideRainAnomPct: number | null;
+  districtsScored: number;
+  meanObservedYieldAnomPct: number | null;
+  meanPredictedYieldAnomPct: number | null;
+  districtsFlagged: number;
+  note: string | null;
+}
+export interface ValidationFile {
+  status: 'ok' | 'insufficient' | 'not_run';
+  message?: string;
+  reason?: string;
+  generatedAt?: string;
+  pairs?: number; years?: number; districts?: number;
+  yieldRows?: number; unpairedYieldRows?: number;
+  skippedFolds?: number[];
+  metrics: ValidationMetrics | null;
+  events: ValidationEvent[];
+  scope?: string; target?: string; predictor?: string; method?: string;
+  thresholds?: { lossYearPct: number; predictedLossPct: number; minPairs: number; minYears: number; minTrendYears: number };
+  limitations?: string[];
+  inputs?: {
+    yieldSource: { file: string; layout: string; sha256: string }[];
+    yieldYearRange: [number, number] | null;
+    yieldRowsTotal: number | null;
+    seasonalSha256: string; seasonalWindow: string;
+    seasonalBaseline: string | null; seasonalLatestYear: number | null;
+  };
+}
+
+export const VALIDATION = validationRaw as unknown as ValidationFile;
+export const HAS_VALIDATION = VALIDATION.status === 'ok';

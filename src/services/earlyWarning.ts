@@ -4,6 +4,7 @@
  * Every rule is listed in RULES so a reviewer can read exactly why a level was raised.
  */
 import { ONI, WEATHER } from '../data/observed';
+import { ENSO_OUTLOOK } from '../data/observed/outlook';
 
 export type WarningLevel = 'NORMAL' | 'WATCH' | 'WARNING' | 'SEVERE';
 
@@ -13,6 +14,7 @@ export const RULES: Rule[] = [
   { level: 'WATCH', when: 'ONI ≥ +0.5 °C', meaning: 'El Niño conditions are emerging. Start preparedness and check seed and fertiliser stocks.' },
   { level: 'WARNING', when: 'ONI ≥ +1.0 °C and season rainfall ≤ −10%', meaning: 'Moderate El Niño is confirmed in observed rainfall. Issue sowing advisories and pre-position reserves.' },
   { level: 'SEVERE', when: 'ONI ≥ +1.5 °C and (rainfall ≤ −20% or temperature ≥ +1.5 °C)', meaning: 'Strong El Niño with a serious deficit. Activate district contingency plans.' },
+  { level: 'WARNING', when: 'NOAA outlook gives ≥ 50% chance of a very strong El Niño in the coming season', meaning: 'Anticipatory warning: prepare before rainfall deficits appear in the observations.' },
 ];
 
 export interface SowingWindow { crop: string; start: string; end: string; startMonth: number; endMonth: number }
@@ -32,6 +34,7 @@ export interface WarningStatus {
   reasons: string[];
   nextWindow: { crop: string; start: string; daysAway: number; open: boolean };
   actions: string[];
+  outlook: typeof ENSO_OUTLOOK;
   asOf: string;
 }
 
@@ -69,13 +72,17 @@ export function getWarningStatus(ref: Date = new Date()): WarningStatus {
   const raise = (l: WarningLevel) => { if (rank[l] > rank[level]) level = l; };
 
   if (oni >= 0.5) { raise('WATCH'); reasons.push(`ONI ${oni >= 0 ? '+' : ''}${oni.toFixed(2)} °C is at or above +0.5 °C.`); }
-  if (oni >= 1.0 && rain != null && rain <= -10) { raise('WARNING'); reasons.push(`Season rainfall is ${rain.toFixed(0)}% against normal (threshold −10%).`); }
+  if (oni >= 1.0 && rain != null && rain <= -10) { raise('WARNING'); reasons.push(`Statewide season rainfall is ${rain.toFixed(0)}% against normal (threshold −10%).`); }
   if (oni >= 1.5 && ((rain != null && rain <= -20) || (temp != null && temp >= 1.5))) { raise('SEVERE'); reasons.push('Strong El Niño combined with a severe rainfall deficit or heat anomaly.'); }
+  if (ENSO_OUTLOOK.veryStrongProbPct >= 50) {
+    raise('WARNING');
+    reasons.push(`NOAA outlook (issued ${ENSO_OUTLOOK.issued}): ${ENSO_OUTLOOK.veryStrongProbPct}% chance of a very strong El Niño in ${ENSO_OUTLOOK.veryStrongPeriod}. Anticipatory warning.`);
+  }
   if (reasons.length === 0) reasons.push('No early-warning rule is met by the current observations.');
 
   return {
     level, oni, rainAnomPct: rain, tempAnomC: temp, reasons,
-    nextWindow: nextSowing(ref), actions: ACTIONS[level],
+    nextWindow: nextSowing(ref), actions: ACTIONS[level], outlook: ENSO_OUTLOOK,
     asOf: WEATHER?.windowEnd ?? ONI.latest.year.toString(),
   };
 }

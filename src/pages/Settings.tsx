@@ -8,11 +8,16 @@ import { Segmented } from '../components/ui/Segmented';
 import { Badge } from '../components/ui/Badge';
 import { useToast } from '../state/toast';
 import { DATA_NOTE, DATA_NOTE_TITLE } from '../lib/dataNote';
-import { ONI, ONI_LABEL, WEATHER } from '../data/observed';
+import { ONI, ONI_LABEL, WEATHER, SEASONAL, HAS_SEASONAL, VALIDATION } from '../data/observed';
+import { ProvenancePanel } from '../components/ProvenancePanel';
+import { ModelCardPanel, ValidationPanel } from '../components/ModelCard';
+import { MODEL_VERSION } from '../data/provenance';
 
 const SOURCES = [
   { n: 'NOAA CPC · Oceanic Niño Index', s: 'Active', d: `Monthly ENSO observations · latest ${ONI_LABEL} (${ONI.latest.value.toFixed(2)}°C) · as of ${ONI.asOf}` },
   { n: 'NASA POWER · daily rainfall & temperature', s: WEATHER ? 'Active' : 'Not fetched', d: WEATHER ? `37 district points · ${WEATHER.windowStart} → ${WEATHER.windowEnd} vs 2001–2020 normals` : 'Run `npm run fetch:climate` to load district weather' },
+  { n: 'NASA POWER · 1991–2026 daily history', s: HAS_SEASONAL ? 'Active' : 'Not built', d: HAS_SEASONAL ? `Seasonal anomalies by district · baseline ${SEASONAL.baseline?.period} · latest complete season ${SEASONAL.latestCompleteYear}` : 'Run `npm run fetch:history`, then `npm run build:seasonal`' },
+  { n: 'ICRISAT district rice statistics', s: VALIDATION.inputs ? 'Active' : 'Not loaded', d: VALIDATION.inputs ? `Rice yields ${VALIDATION.inputs.yieldYearRange?.join('–')} · ${VALIDATION.inputs.yieldRowsTotal} district-years` : 'Place the CSV in data/raw/icrisat, then run `npm run normalize:yields`' },
   { n: 'IMD gridded rainfall (0.25°)', s: 'Planned', d: 'Official Indian rainfall product' },
   { n: 'TN WRD reservoir bulletins', s: 'Planned', d: 'Storage levels' },
   { n: 'DES district crop statistics', s: 'Planned', d: 'Area, production, yield history' },
@@ -45,14 +50,17 @@ export default function Settings() {
             ))}
           </ul>
         </Panel>
+        <ProvenancePanel />
         <Panel eyebrow={<span className="flex items-center gap-1.5"><Cpu className="h-3 w-3" />Model configuration</span>} title="Risk engine">
           <div className="space-y-3 text-[13px]">
-            {[['Risk model', 'Heuristic v0.3 (transparent, additive)'], ['Optimiser', 'Exhaustive search · ≤4 levers · ≥50% staple retained'], ['Adoption assumption', '62% within season'], ['Yield-loss ceiling', '45% at risk = 100'], ['Spatial unit', 'District (37) · modelled area 18,770 ha']].map(([k, v]) => (
+            {[['Risk model', `${MODEL_VERSION} (transparent, additive, not calibrated)`], ['Optimiser', 'Exhaustive search · ≤4 levers · ≥50% staple retained'], ['Adoption assumption', '62% within season'], ['Yield-loss ceiling', '45% at risk = 100'], ['Spatial unit', 'District (37) · modelled area 18,770 ha']].map(([k, v]) => (
               <div key={k} className="flex justify-between gap-4 border-b border-white/[0.04] pb-2.5"><span className="text-fog-500">{k}</span><span className="text-right text-fog-100">{v}</span></div>
             ))}
-            <div className="text-[11.5px] text-fog-600">Production path: replace with calibrated crop models (e.g. DSSAT/APSIM emulators) validated against historical district yields.</div>
+            <div className="text-[11.5px] text-fog-600">Backtest covers the rainfall term only (see Historical backtest). Crop-model calibration (e.g. DSSAT/APSIM emulators) has not been done.</div>
           </div>
         </Panel>
+        <ModelCardPanel />
+        <ValidationPanel />
         <Panel eyebrow={<span className="flex items-center gap-1.5"><Bell className="h-3 w-3" />Alert thresholds</span>} title="When should we alert?">
           <div className="space-y-5">
             <Slider label="Crop risk threshold" value={th.crop} min={40} max={90} onChange={(v) => setTh((t) => ({ ...t, crop: v }))} format={(v) => `${v}%`} accent="#FF4D5E" />

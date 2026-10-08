@@ -2,9 +2,9 @@ import { useEffect, useState, useCallback } from 'react';
 
 export type RouteId =
   | 'overview' | 'climate' | 'risk-map' | 'crops' | 'simulator' | 'food' | 'water'
-  | 'planner' | 'alerts' | 'farm' | 'insights' | 'reports' | 'settings';
+  | 'planner' | 'alerts' | 'actions' | 'farm' | 'insights' | 'reports' | 'settings';
 
-export const ROUTES: RouteId[] = ['overview', 'climate', 'risk-map', 'crops', 'simulator', 'food', 'water', 'planner', 'alerts', 'farm', 'insights', 'reports', 'settings'];
+export const ROUTES: RouteId[] = ['overview', 'climate', 'risk-map', 'crops', 'simulator', 'food', 'water', 'planner', 'alerts', 'actions', 'farm', 'insights', 'reports', 'settings'];
 
 function parse(): RouteId {
   const h = window.location.hash.replace(/^#\/?/, '').split('?')[0] as RouteId;

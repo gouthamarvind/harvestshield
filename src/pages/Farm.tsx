@@ -10,6 +10,10 @@ import { interventionEffect, type InterventionId } from '../services/interventio
 import { riskBand, riskColor } from '../lib/risk';
 import { useToast } from '../state/toast';
 import { fmtSigned } from '../lib/format';
+import { ONI, ONI_LABEL, WEATHER } from '../data/observed';
+import { dataQuality } from '../lib/dataQuality';
+import { buildAdvisory, appUrl } from '../lib/advisory';
+import { AdvisoryShare } from '../components/AdvisoryShare';
 
 const ACRES = 3.2;
 const HA = ACRES / 2.471;
@@ -29,7 +33,7 @@ const REC: Record<InterventionId, { en: [string, string]; ta: [string, string] }
 };
 
 export default function Farm() {
-  const { params, lang, setLang } = useApp();
+  const { params, lang, setLang, presetId } = useApp();
   const toast = useToast();
   const t = T[lang];
   const d = districtById('thanjavur')!;
@@ -38,6 +42,22 @@ export default function Farm() {
     .map((id) => ({ id, e: interventionEffect(params, d, 'rice', HA, id) }))
     .sort((a, b) => b.e.riskReduction - a.e.riskReduction).slice(0, 3), [params, d]);
   const band = riskBand(out.risk);
+  const quality = dataQuality(d.id, presetId === 'observed');
+  const obs = WEATHER?.districts?.[d.id];
+  const rainPct = obs?.rainAnomPct ?? params.rainfall;
+  const tempC = obs?.tempAnomC ?? params.temperature;
+  const message = buildAdvisory(lang, {
+    district: { en: 'Thanjavur', ta: 'தஞ்சாவூர்' },
+    crop: { en: 'Rice (samba)', ta: 'நெல் (சம்பா)' },
+    risk: { en: T.en.band[band], ta: T.ta.band[band] },
+    rain: { en: `${fmtSigned(rainPct, 0, '%')} vs normal`, ta: `${fmtSigned(rainPct, 0, '%')} (இயல்புடன் ஒப்பிடும்போது)` },
+    temperature: { en: `${fmtSigned(tempC, 1, '°C')} vs normal`, ta: `${fmtSigned(tempC, 1, '°C')} (இயல்புடன் ஒப்பிடும்போது)` },
+    oni: { en: `${ONI.latest.value >= 0 ? '+' : ''}${ONI.latest.value.toFixed(2)} (${ONI_LABEL})`, ta: `${ONI.latest.value.toFixed(2)} (${ONI_LABEL})` },
+    water: { en: `${params.water}% of normal (assumed input)`, ta: `${params.water}% (ஊகிக்கப்பட்ட உள்ளீடு)` },
+    actions: recs.map((r) => ({ en: REC[r.id].en[0], ta: REC[r.id].ta[0] })),
+    quality: { en: `${quality.level}. ${quality.reason}`, ta: `${quality.ta}` },
+    url: appUrl(),
+  });
 
   const speak = () => {
     const text = lang === 'en'
@@ -74,7 +94,7 @@ export default function Farm() {
                 <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10"><motion.div className="h-full rounded-full" style={{ background: riskColor(out.risk) }} animate={{ width: `${out.risk}%` }} /></div>
               </div>
               <div className="mt-3 grid grid-cols-3 gap-2 text-center">
-                {[{ i: CloudRain, l: t.rain, v: fmtSigned(params.rainfall, 0, '%'), c: '#4FE3F0' }, { i: Droplets, l: t.water, v: `${params.water}%`, c: '#7C9CFF' }, { i: Thermometer, l: t.heat, v: fmtSigned(params.temperature, 1, '°'), c: '#FF7A3D' }].map((x) => (
+                {[{ i: CloudRain, l: t.rain, v: fmtSigned(rainPct, 0, '%'), c: '#4FE3F0' }, { i: Droplets, l: t.water, v: `${params.water}%`, c: '#7C9CFF' }, { i: Thermometer, l: t.heat, v: fmtSigned(tempC, 1, '°'), c: '#FF7A3D' }].map((x) => (
                   <div key={x.l} className="rounded-2xl bg-white/[0.04] py-2.5"><x.i className="mx-auto h-4 w-4" style={{ color: x.c }} /><div className="mt-1 text-[10.5px] text-fog-500">{x.l}</div><div className="num text-[14px] font-semibold">{x.v}</div></div>
                 ))}
               </div>
@@ -99,6 +119,7 @@ export default function Farm() {
         </motion.div>
 
         <div className="space-y-4">
+          <AdvisoryShare message={message} lang={lang} />
           <Panel eyebrow="How it reaches farmers" title="Same intelligence, simpler surface">
             <div className="grid gap-3 md:grid-cols-3">
               {[{ i: Volume2, h: 'Voice advisory', p: 'IVR call or in-app audio in Tamil for low-literacy users. Tap the speaker on the phone to hear it.' }, { i: MessageSquare, h: 'SMS / WhatsApp', p: 'Weekly 160-character action message tied to the farmer’s crop calendar.' }, { i: Phone, h: 'Extension officer', p: 'Officers see the district view and call farmers with the highest modelled risk first.' }].map((c) => (
