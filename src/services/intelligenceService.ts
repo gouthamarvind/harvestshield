@@ -8,6 +8,7 @@ import { ensoLabel } from '../data/scenarios';
 import type { DistrictRisk } from './cropRiskService';
 import type { FoodSecurity } from './foodSecurityService';
 import { analogSimilarity } from './climateService';
+import { getWarningStatus } from './earlyWarning';
 
 export type Severity = 'HIGH' | 'MEDIUM' | 'INFO';
 export type AlertCategory = 'Climate' | 'Agriculture' | 'Water' | 'Food security';
@@ -15,6 +16,8 @@ export interface Alert { id: string; severity: Severity; category: AlertCategory
 
 export function getAlerts(p: ScenarioParams, risks: DistrictRisk[], food: FoodSecurity): Alert[] {
   const out: Alert[] = [];
+  const ew = getWarningStatus();
+  if (ew.level !== 'NORMAL') out.push({ id: 'ew', severity: ew.level === 'SEVERE' || ew.level === 'WARNING' ? 'HIGH' : 'MEDIUM', category: 'Climate', title: `Early-warning level: ${ew.level}`, detail: ew.reasons.join(' '), location: 'Tamil Nadu', minutesAgo: 0, action: ew.actions[0] });
   const crit = risks.filter((r) => r.score >= 70);
   crit.slice(0, 3).forEach((r) => out.push({
     id: `crop-${r.district.id}`, severity: 'HIGH', category: 'Agriculture',
