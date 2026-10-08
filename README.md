@@ -1,6 +1,6 @@
 # HarvestShield
 
-**Predict the impact. Simulate the intervention. Protect the harvest.**
+**Anticipate the risk. Plan the response. Protect the harvest.**
 
 HarvestShield transforms El Niño climate signals into localized agricultural and food-security risk, then simulates the interventions that can reduce the impact before it happens. Built for VELSATHON'26 — *El Niño and its impacts* (SDG 2 Zero Hunger · SDG 13 Climate Action).
 
@@ -12,7 +12,7 @@ HarvestShield transforms El Niño climate signals into localized agricultural an
 | District rainfall & temperature, 1 Jun → latest | **Real** after you run `npm run fetch:climate` (NASA POWER vs 2001–2020 normals) |
 | Analog years (1997, 2009, 2015, 2023) | **Real** ONI trajectories, similarity computed from data |
 | Crop mix, reservoir storage, population, vulnerability | Illustrative (labelled in the app) |
-| Risk weights | Hand-set, transparent (Settings → Model card). The backtest tests the rainfall term only; see Settings → Historical backtest |
+| Risk weights | Hand-set, transparent (Settings → Model card). The rainfall-only backtest found no predictive skill; see Settings → Historical backtest |
 | 1991–2026 district rainfall history | **Real** after you run `npm run fetch:history` and `npm run build:seasonal` |
 | Tamil Nadu district rice yields | **Real** only after you add the ICRISAT CSV and run `npm run normalize:yields` (see below) |
 
@@ -46,7 +46,7 @@ npm test                  # unit and synthetic end-to-end tests; no network; wri
 
 The backtest uses leave-one-year-out testing: for each held-out year, the district trends and the regression are refit without that year. It reports Pearson and Spearman correlation, MAE against a trend-only baseline, and loss-year recall and precision. If the sample is too small, it reports `insufficient` with no metrics.
 
-Known limits: the predictor is seasonal rainfall only, and the 1 Jun – 5 Oct window misses the north-east monsoon. Yield data stops at the source year (2015), so 2023–24 is not validated. The app shows "not run" until each step has been executed.
+Known limits: the predictor is seasonal rainfall only, and the 1 Jun – 5 Oct window misses the north-east monsoon. Yield data stops at the source year (2015), so 2023–24 is not validated. The app shows "not run" until each step has been executed. Two rainfall baselines are in use: the Overview and Climate pages compare against 2001–2020 normals (climate.json), while the backtest and model card use 1991–2020 seasonal anomalies, so the same district can show two different anomalies. The 37 districts map to 29 distinct daily rainfall series, because six groups share a NASA POWER grid cell. The processed yield file is derived from ICRISAT data; confirm the dataset licence before redistributing it.
 
 ## Run it
 
@@ -62,13 +62,17 @@ Requires Node 18+. No backend, no API keys, no database.
 
 ## Demo script (≈3 minutes)
 
-1. **Overview** — scenario is *Strong El Niño* (ENSO 1.7, −18% rain, +1.4°C). Walk the 7-step impact chain from ocean to plate.
-2. Click **Thanjavur** in *Top risk regions* → drawer shows 79% risk, rice 84% of area, top drivers, recommended intervention.
-3. **Simulate this district** → Scenario Lab opens on Thanjavur rice (80%, SEVERE).
-4. Toggle **Diversify 30%** → risk drops ~25 pts, water −21%, food-security exposure falls. Show the factor bars and the sensitivity curve.
-5. Change **Optimize for** (food / water / income / resilience) → the recommendation changes; **Apply**.
-6. **Add to response plan** → Intervention Planner → add *Increase food reserves* → **Generate response plan**.
-7. Press `1` for observed data, `2`–`6` for what-if scenarios; every view recomputes.
+The point of the demo is the honest finding. Do not quote risk scores as forecasts.
+
+1. **Overview**: the *Strong El Niño* scenario is a what-if preset (ENSO 1.7, −18% rain, +1.4 °C). Walk the impact chain from ocean to plate and say it is illustrative.
+2. **Settings → Historical backtest**: rainfall alone did not predict district rice yield anomalies in the 1990–2015 record. Read out the result: 670 held-out district-years across 30 districts and 25 years, Pearson r -0.05, skill against a trend-only baseline -0.01, and 0 years flagged. Run 2026-10-08.
+3. **Settings → Model card**: show the hand-set weights, what each term measures, where its input comes from, and the limitations.
+4. Click a district in *Top risk regions* and open the drawer. Point to the factor breakdown and the source label on each input.
+5. **Simulate this district** opens the Scenario Lab. Toggle a diversification option and show which factors move. Describe the result as a what-if.
+6. **Alerts**: show the early-warning levels and the ENSO outlook with its issue date and source.
+7. **Action Plan**: export the CSV and show the advisory. The Tamil text has not been reviewed by a native speaker.
+
+Keyboard shortcuts are listed below.
 
 ## Keyboard
 
