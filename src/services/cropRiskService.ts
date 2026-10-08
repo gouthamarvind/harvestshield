@@ -7,6 +7,7 @@ import { DISTRICTS, cropLabel, primaryCrop, type District } from '../data/distri
 import type { ScenarioParams } from '../data/scenarios';
 import { blendFactors, cropRisk, type Factor } from '../model/risk';
 import { clamp } from '../lib/format';
+import { localize } from '../model/localize';
 
 export const exposureOf = (d: District) => ({ irrigation: d.irrigation, coastal: d.coastal, heat: d.heat, rain: d.rain });
 
@@ -29,8 +30,8 @@ export interface DistrictRisk {
   monitoredProductionT: number;
 }
 
-export function districtRisk(p: ScenarioParams, d: District): DistrictRisk {
-  const exp = exposureOf(d);
+export function districtRisk(p0: ScenarioParams, d: District): DistrictRisk {
+  const { p, exp } = localize(p0, d);
   const parts = CROP_IDS.filter((c) => d.mix[c] > 0).map((c) => ({ c, w: d.mix[c], r: cropRisk(p, c, exp), n: cropRisk({ enso: 0, rainfall: 0, temperature: 0, water: 90 }, c, exp) }));
   const weighted = parts.reduce((s, x) => s + x.w * x.r.score, 0);
   // Socio-economic vulnerability amplifies agronomic risk at district scale.
@@ -39,14 +40,14 @@ export function districtRisk(p: ScenarioParams, d: District): DistrictRisk {
   const yNow = parts.reduce((s, x) => s + x.w * x.r.yieldTHa, 0);
   const yNorm = parts.reduce((s, x) => s + x.w * x.n.yieldTHa, 0);
   const yieldChange = (yNow / yNorm - 1) * 100;
-  const waterStress = clamp(((90 - p.water) + Math.max(0, -p.rainfall * d.rain) * 0.8) * (0.6 + 0.5 * d.irrigation) + p.temperature * d.heat * 4, 0, 100);
+  const waterStress = clamp(((90 - p.water) + Math.max(0, -p.rainfall * exp.rain) * 0.8) * (0.6 + 0.5 * d.irrigation) + Math.max(0, p.temperature) * exp.heat * 4, 0, 100);
   const foodExposure = clamp(-yieldChange * 1.9 * (0.55 + 0.7 * d.vulnerability) + d.coastal * 4 * Math.max(0, p.enso), 0, 100);
   return {
     district: d, score, factors, primary: primaryCrop(d), cropLabel: cropLabel(d), yieldChange, waterStress,
     waterAvailability: clamp(p.water * (1.08 - d.irrigation * 0.2), 0, 100),
     foodExposure,
-    rainfallAnomaly: p.rainfall * d.rain,
-    temperatureAnomaly: p.temperature * d.heat,
+    rainfallAnomaly: p.rainfall * exp.rain,
+    temperatureAnomaly: p.temperature * exp.heat,
     populationVulnerability: d.vulnerability * 100,
     productionAtRiskT: d.monitoredHa * (yNorm - yNow),
     monitoredProductionT: d.monitoredHa * yNorm,
@@ -87,8 +88,8 @@ export interface CropComparison {
 }
 
 /** Compare all crops for one district's exposure under the scenario. */
-export function compareCrops(p: ScenarioParams, d: District): CropComparison[] {
-  const exp = exposureOf(d);
+export function compareCrops(p0: ScenarioParams, d: District): CropComparison[] {
+  const { p, exp } = localize(p0, d);
   return CROP_IDS.map((c) => {
     const r = cropRisk(p, c, exp);
     const n = cropRisk({ enso: 0, rainfall: 0, temperature: 0, water: 90 }, c, exp);

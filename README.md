@@ -4,7 +4,26 @@
 
 HarvestShield transforms El Niño climate signals into localized agricultural and food-security risk, then simulates the interventions that can reduce the impact before it happens. Built for VELSATHON'26 — *El Niño and its impacts* (SDG 2 Zero Hunger · SDG 13 Climate Action).
 
-> **Prototype scenario — values are illustrative.** Production deployment would use ENSO observations, seasonal forecasts, historical crop yield data, water availability, soil/geospatial data and validated agronomic models.
+## What is real and what is not
+
+| Input | Status |
+|---|---|
+| El Niño strength (Oceanic Niño Index) | **Real** — NOAA CPC, bundled snapshot to Jul–Sep 2026 |
+| District rainfall & temperature, 1 Jun → latest | **Real** after you run `npm run fetch:climate` (NASA POWER vs 2001–2020 normals) |
+| Analog years (1997, 2009, 2015, 2023) | **Real** ONI trajectories, similarity computed from data |
+| Crop mix, reservoir storage, population, vulnerability | Illustrative (labelled in the app) |
+| Risk weights | Hand-set, transparent; **not validated** against harvest records |
+
+The default scenario, **Observed now**, is built from the real inputs. The other five scenarios are what-if presets.
+
+### Refresh the real climate data
+
+```bash
+npm run fetch:climate   # needs Node 18+ and internet; takes ~2 minutes
+git add src/data/observed/climate.json && git commit -m "Update observed climate" && git push
+```
+
+Vercel redeploys automatically after the push.
 
 ## Run it
 
@@ -25,7 +44,7 @@ Requires Node 18+. No backend, no API keys, no database.
 4. Toggle **Diversify 30%** → risk drops ~25 pts, water −21%, food-security exposure falls. Show the factor bars and the sensitivity curve.
 5. Change **Optimize for** (food / water / income / resilience) → the recommendation changes; **Apply**.
 6. **Add to response plan** → Intervention Planner → add *Increase food reserves* → **Generate response plan**.
-7. Press `1`–`5` anywhere to switch demo scenarios; every view recomputes.
+7. Press `1` for observed data, `2`–`6` for what-if scenarios; every view recomputes.
 
 ## Keyboard
 
@@ -33,7 +52,7 @@ Requires Node 18+. No backend, no API keys, no database.
 |---|---|
 | `Ctrl/⌘ K` | Command palette (pages, districts, scenarios, reports) |
 | `G` then `O/E/M/C/S/F/W/P/A/I/R` | Jump to Overview, Climate, Map, Crops, Scenario Lab, Food, Water, Planner, Alerts, Insights, Reports |
-| `1`–`5` | Demo scenarios: Normal, Moderate, Strong, Extreme water stress, Recovery |
+| `1`–`6` | Scenarios: Observed now, Normal, Moderate, Strong, Extreme water stress, Recovery |
 | `[` | Collapse sidebar |
 | `Esc` | Close drawer / modal / palette |
 

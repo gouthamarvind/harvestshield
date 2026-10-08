@@ -12,6 +12,7 @@ import { riskBand, riskColor } from '../lib/risk';
 import { useToast } from '../state/toast';
 import { FactorBars } from './ui/FactorBars';
 import { Logo } from './layout/Logo';
+import { DATA_NOTE } from '../lib/dataNote';
 
 const TITLES = { district: 'District Brief', food: 'Food Security Brief', climate: 'Climate Risk Report' } as const;
 
@@ -66,7 +67,7 @@ export function ReportModal() {
               <>
                 <div className="mt-5 grid grid-cols-3 gap-3">
                   <Fig k="Signal" v={food.level} s={`index ${food.index.toFixed(0)}/100`} />
-                  <Fig k="Production at risk" v={`${fmtInt(food.productionLossT)} t`} s="pilot network" />
+                  <Fig k="Production at risk" v={`${fmtInt(food.productionLossT)} t`} s="modelled area" />
                   <Fig k="Reserve coverage" v={`${food.reserveDays} days`} s={`~${fmtInt(food.vulnerablePopulation)} vulnerable`} />
                 </div>
                 <H>Assessment</H>
@@ -88,7 +89,7 @@ export function ReportModal() {
                 <table className="w-full text-[12.5px]"><tbody>{risks.slice(0, 6).map((r) => <tr key={r.district.id} className="border-b border-[#0C1E15]/10"><td className="py-1.5">{r.district.name}</td><td>{r.cropLabel}</td><td className="text-right font-mono" style={{ color: riskColor(r.score) }}>{r.score.toFixed(0)}%</td></tr>)}</tbody></table>
               </>
             )}
-            <footer className="mt-6 border-t border-[#0C1E15]/10 pt-3 text-[10.5px] leading-relaxed text-[#5B7266]">Prototype scenario — values are illustrative. Production deployment would use ENSO observations, seasonal forecasts, historical crop yield data, water availability, soil/geospatial data and validated agronomic models.</footer>
+            <footer className="mt-6 border-t border-[#0C1E15]/10 pt-3 text-[10.5px] leading-relaxed text-[#5B7266]">{DATA_NOTE}</footer>
           </article>
         )}
       </div>

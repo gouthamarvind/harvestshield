@@ -1,84 +1,80 @@
 /**
  * climateService — ENSO, rainfall and temperature signals.
- * Prototype: deterministic synthetic series shaped by the active scenario.
- * Production: swap for NOAA CPC ONI / IMD gridded rainfall / ERA5 temperature adapters with the same return types.
+ * History is REAL: NOAA CPC ONI (bundled snapshot / refreshed by the fetch script) and, once
+ * `npm run fetch:climate` has run, NASA POWER monthly rainfall & temperature anomalies for Tamil Nadu.
+ * The month-ahead outlook remains a scenario projection, not a forecast.
  */
 import type { ScenarioParams } from '../data/scenarios';
-import { mulberry32 } from '../lib/prng';
 import { clamp } from '../lib/format';
+import { ONI, WEATHER } from '../data/observed';
 
-export interface ClimatePoint { date: string; t: number; enso: number; rainfall: number; temperature: number; forecast: boolean }
+export interface ClimatePoint { date: string; t: number; enso: number | null; rainfall: number | null; temperature: number | null; forecast: boolean }
 export type TimeRange = '30d' | '90d' | '12m' | '24m';
-export const TIME_RANGES: { id: TimeRange; label: string; days: number }[] = [
-  { id: '30d', label: 'Last 30 days', days: 30 },
-  { id: '90d', label: 'Last 90 days', days: 90 },
-  { id: '12m', label: 'Last 12 months', days: 365 },
-  { id: '24m', label: 'Last 24 months', days: 730 },
+export const TIME_RANGES: { id: TimeRange; label: string; days: number; months: number }[] = [
+  { id: '30d', label: 'Last 3 months', days: 90, months: 3 },
+  { id: '90d', label: 'Last 6 months', days: 180, months: 6 },
+  { id: '12m', label: 'Last 12 months', days: 365, months: 12 },
+  { id: '24m', label: 'Last 24 months', days: 730, months: 24 },
 ];
 
-const TODAY = new Date('2026-10-08T00:00:00Z');
-const DAY = 86400000;
-
-/** Daily signal for the past 730 days + 90 forecast days, scaled to the scenario's current state. */
-export function getClimateSeries(p: ScenarioParams): ClimatePoint[] {
-  const rnd = mulberry32(42);
-  const out: ClimatePoint[] = [];
-  let rN = 0, tN = 0, eN = 0;
-  for (let i = -730; i <= 90; i++) {
-    // Past: smooth ramp from ENSO-neutral (~14 months ago) to today's scenario state. Future: brief peak, then decay.
-    const tt = clamp((i + 420) / 420, 0, 1);
-    const k = i <= 0 ? tt * tt * (3 - 2 * tt) : i <= 45 ? 1 + 0.08 * (i / 45) : 1.08 - (i - 45) / 300;
-    eN = eN * 0.94 + (rnd() - 0.5) * 0.05;
-    rN = rN * 0.8 + (rnd() - 0.5) * 3.2;
-    tN = tN * 0.85 + (rnd() - 0.5) * 0.12;
-    const season = Math.sin(((i + 120) / 365) * Math.PI * 2) * 2.5;
-    out.push({
-      date: new Date(TODAY.getTime() + i * DAY).toISOString().slice(0, 10),
-      t: i,
-      enso: +(p.enso * k - 0.35 * (1 - k) + eN).toFixed(2),
-      rainfall: +(p.rainfall * k + rN + season).toFixed(1),
-      temperature: +(p.temperature * k + tN + 0.15).toFixed(2),
-      forecast: i > 0,
-    });
-  }
-  return out;
+/** Monthly observed series (ONI by season-centre month; rainfall/temperature anomalies when fetched). */
+export function getClimateSeries(_p?: ScenarioParams): ClimatePoint[] {
+  const byMonth = new Map<string, ClimatePoint>();
+  const get = (m: string) => {
+    if (!byMonth.has(m)) byMonth.set(m, { date: `${m}-15`, t: 0, enso: null, rainfall: null, temperature: null, forecast: false });
+    return byMonth.get(m)!;
+  };
+  for (const o of ONI.monthly) get(o.month).enso = o.value;
+  for (const w of WEATHER?.monthly ?? []) { const pt = get(w.month); pt.rainfall = w.rainAnomPct; pt.temperature = w.tempAnomC; }
+  const all = [...byMonth.values()].sort((a, b) => (a.date < b.date ? -1 : 1));
+  all.forEach((pt, i) => (pt.t = i - (all.length - 1)));
+  return all;
 }
 
-export function sliceSeries(series: ClimatePoint[], range: TimeRange, includeForecast = true): ClimatePoint[] {
-  const days = TIME_RANGES.find((r) => r.id === range)!.days;
-  const fwd = includeForecast ? Math.max(14, Math.round(days * 0.25)) : 0;
-  const s = series.filter((d) => d.t > -days && d.t <= fwd);
-  const step = Math.max(1, Math.floor(s.length / 120));
-  return s.filter((_, i) => i % step === 0 || s[i].t === 0);
+export function sliceSeries(series: ClimatePoint[], range: TimeRange): ClimatePoint[] {
+  const months = TIME_RANGES.find((r) => r.id === range)!.months;
+  return series.slice(-Math.max(months, 3));
 }
 
-/** Historical El Niño analogues (approximate ONI-style trajectories, illustrative). */
-export interface AnalogYear { id: string; label: string; peak: number; rainfall: number; impact: string; oni: number[] }
-export const ANALOGS: AnalogYear[] = [
-  { id: '1997', label: '1997–98', peak: 2.4, rainfall: -12, impact: 'Severe; widespread kharif deficits', oni: [-0.5, -0.3, 0, 0.4, 0.8, 1.2, 1.6, 1.9, 2.1, 2.3, 2.4, 2.2, 1.9] },
-  { id: '2009', label: '2009–10', peak: 1.6, rainfall: -22, impact: 'Major drought year nationally', oni: [-0.8, -0.6, -0.2, 0.1, 0.4, 0.6, 0.8, 0.8, 1.0, 1.4, 1.6, 1.6, 1.3] },
-  { id: '2015', label: '2015–16', peak: 2.6, rainfall: -14, impact: 'Second consecutive deficit monsoon', oni: [0.5, 0.5, 0.6, 0.7, 0.9, 1.2, 1.5, 1.9, 2.2, 2.4, 2.6, 2.6, 2.5] },
-  { id: '2023', label: '2023–24', peak: 2.0, rainfall: -6, impact: 'Uneven monsoon; heat extremes', oni: [-0.4, -0.1, 0.2, 0.5, 0.8, 1.1, 1.3, 1.6, 1.8, 1.9, 2.0, 2.0, 1.8] },
-];
+/** Historical El Niño analogues, real ONI on an Apr → Apr axis. */
+export interface AnalogYear { id: string; label: string; peak: number; impact: string; oni: (number | null)[] }
 export const ANALOG_MONTHS = ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'];
 
-/** Current-season trajectory on the same monthly axis, ending at the scenario value (index 6 = Oct, "now"). */
-export function currentTrajectory(p: ScenarioParams): (number | null)[] {
-  const tail = [0.3, 0.32, 0.38, 0.46, 0.6, 0.8, 1].map((f) => +(p.enso * f).toFixed(2));
-  return [...tail, null, null, null, null, null, null];
+/** Apr(y) … Apr(y+1) using season-centre months: Apr = MAM … Dec = NDJ, Jan = DJF(y+1) … Apr = MAM(y+1). */
+function trajectory(y: number): (number | null)[] {
+  const a = ONI.table[y] ?? Array(12).fill(null), b = ONI.table[y + 1] ?? Array(12).fill(null);
+  return [...a.slice(3, 12), ...b.slice(0, 4)];
 }
-export function forecastTrajectory(p: ScenarioParams): (number | null)[] {
-  const f = [1, 1.08, 1.12, 1.1, 1.0, 0.85, 0.7].map((x) => +(p.enso * x).toFixed(2));
-  return [null, null, null, null, null, null, ...f];
+const IMPACTS: Record<string, string> = {
+  '1997': 'Very strong event; all-India monsoon still near normal',
+  '2009': 'Moderate event; severe all-India monsoon drought',
+  '2015': 'Very strong event; Chennai floods in Dec 2015',
+  '2023': 'Strong event; Dec 2023 floods in Chennai & south TN',
+};
+export const ANALOGS: AnalogYear[] = [1997, 2009, 2015, 2023].map((y) => {
+  const oni = trajectory(y);
+  return { id: String(y), label: `${y}–${String(y + 1).slice(2)}`, peak: Math.max(...oni.filter((v): v is number => v != null)), impact: IMPACTS[y], oni };
+});
+
+export const CURRENT_YEAR = ONI.latest.year;
+/** The current season's observed ONI on the same axis. */
+export function currentTrajectory(_p?: ScenarioParams): (number | null)[] {
+  return trajectory(CURRENT_YEAR);
+}
+/** Index of the latest observed month on the Apr→Apr axis. */
+export const NOW_INDEX = (() => { const t = trajectory(CURRENT_YEAR); let i = -1; t.forEach((v, k) => { if (v != null) i = k; }); return i; })();
+/** No official forecast is ingested, so no forecast line is drawn. */
+export function forecastTrajectory(_p?: ScenarioParams): (number | null)[] {
+  return ANALOG_MONTHS.map(() => null);
 }
 
-/** Similarity = 100 − scaled RMSE between the observed months and each analogue. */
-export function analogSimilarity(p: ScenarioParams): { analog: AnalogYear; similarity: number }[] {
-  const cur = currentTrajectory(p).slice(0, 7) as number[];
+/** Similarity = 100 − scaled RMSE over the months observed so far this season. */
+export function analogSimilarity(_p?: ScenarioParams): { analog: AnalogYear; similarity: number }[] {
+  const cur = currentTrajectory();
   return ANALOGS.map((a) => {
-    const err = Math.sqrt(cur.reduce((s, v, i) => s + (v - a.oni[i]) ** 2, 0) / cur.length);
-    const rainErr = Math.abs(p.rainfall - a.rainfall) / 30;
-    return { analog: a, similarity: clamp(100 - err * 55 - rainErr * 18, 5, 98) };
+    const pairs = cur.map((v, i) => [v, a.oni[i]] as const).filter(([v, w]) => v != null && w != null) as [number, number][];
+    const err = Math.sqrt(pairs.reduce((s, [v, w]) => s + (v - w) ** 2, 0) / Math.max(1, pairs.length));
+    return { analog: a, similarity: clamp(100 - err * 60, 5, 99) };
   }).sort((x, y) => y.similarity - x.similarity);
 }
 

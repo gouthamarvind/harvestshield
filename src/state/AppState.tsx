@@ -67,12 +67,12 @@ const simFor = (districtId: string, params: ScenarioParams, keep?: Partial<SimSt
 };
 
 export function AppStateProvider({ children, navigate }: { children: ReactNode; navigate: (r: RouteId) => void }) {
-  const [presetId, setPresetId] = useState<PresetId>('strong');
+  const [presetId, setPresetId] = useState<PresetId>('observed');
   const [presetVersion, setPresetVersion] = useState(0);
   const params = presetById(presetId).params;
   const [timeRange, setTimeRange] = useState<TimeRange>('12m');
   const [drawerDistrict, setDrawer] = useState<string | null>(null);
-  const [sim, setSimState] = useState<SimState>(() => simFor('thanjavur', presetById('strong').params));
+  const [sim, setSimState] = useState<SimState>(() => simFor('thanjavur', presetById('observed').params));
   const [plan, setPlan] = useState<InterventionId[]>([]);
   const [reviewed, setReviewed] = useState<Set<string>>(new Set());
   const [lang, setLang] = useState<Lang>('en');
@@ -94,7 +94,15 @@ export function AppStateProvider({ children, navigate }: { children: ReactNode; 
     setReviewed(new Set());
   }, []);
 
-  const setSim = useCallback((patch: Partial<SimState>) => setSimState((s) => ({ ...s, ...patch })), []);
+  const setSim = useCallback((patch: Partial<SimState>) => setSimState((s) => {
+    // Moving the rainfall or temperature slider replaces the observed district values with the slider value.
+    if (patch.params && s.params.local && (patch.params.rainfall !== s.params.rainfall || patch.params.temperature !== s.params.temperature)) {
+      const { local: _drop, ...rest } = patch.params;
+      void _drop;
+      patch = { ...patch, params: rest };
+    }
+    return { ...s, ...patch };
+  }), []);
   const simulateDistrict = useCallback((id: string) => {
     setSimState((s) => simFor(id, params, { objective: s.objective, areaHa: s.areaHa }));
     setDrawer(null);

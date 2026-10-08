@@ -7,11 +7,12 @@ import { navById } from './nav';
 import type { RouteId } from '../../lib/router';
 import { TIME_RANGES, type TimeRange } from '../../services/climateService';
 import type { PresetId } from '../../data/scenarios';
+import { ONI, ONI_LABEL, WEATHER } from '../../data/observed';
 import { useToast } from '../../state/toast';
 import { NotificationCenter } from './NotificationCenter';
 import { cn } from '../../lib/cn';
 
-const presetDot: Record<PresetId, string> = { normal: '#3DF58A', moderate: '#F5B83D', strong: '#FF7A3D', 'extreme-water': '#FF4D5E', recovery: '#4FE3F0' };
+const presetDot: Record<PresetId, string> = { observed: '#C6F432', normal: '#3DF58A', moderate: '#F5B83D', strong: '#FF7A3D', 'extreme-water': '#FF4D5E', recovery: '#4FE3F0' };
 
 export function Topbar({ route, onMenu }: { route: RouteId; onMenu: () => void }) {
   const { presetId, setPreset, timeRange, setTimeRange, setPaletteOpen, alerts, reviewed, presetVersion } = useApp();
@@ -57,17 +58,18 @@ export function Topbar({ route, onMenu }: { route: RouteId; onMenu: () => void }
           options={TIME_RANGES.map((t) => ({ value: t.id, label: t.label }))} />
       </div>
       <div className="flex items-center gap-2">
-        <span className="hidden whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.14em] text-fog-500 min-[1800px]:inline">Demo scenario</span>
-        <Select<PresetId> label="Demo scenario" value={presetId} align="right" className="w-[54px] sm:w-[214px]" menuClass="w-[280px]"
+        <span className="hidden whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.14em] text-fog-500 min-[1800px]:inline">Scenario</span>
+        <Select<PresetId> label="Scenario" value={presetId} align="right" className="w-[54px] sm:w-[214px]" menuClass="w-[280px]"
           icon={<FlaskConical className="h-3.5 w-3.5 text-mint" />}
           onChange={(v) => { setPreset(v); toast({ tone: 'success', title: `Scenario applied · ${PRESETS.find((p) => p.id === v)!.name}`, body: 'All views recomputed from the scenario model.' }); }}
           renderValue={(o) => <span className="hidden min-w-0 items-center gap-2 sm:flex"><span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: presetDot[o.value], boxShadow: `0 0 8px ${presetDot[o.value]}` }} /><span className="truncate">{o.label}</span></span>}
           options={PRESETS.map((p, i) => ({ value: p.id, label: p.name, hint: p.description, icon: <span className="grid h-5 w-5 shrink-0 place-items-center rounded border border-white/10 font-mono text-[10px] text-fog-400">{i + 1}</span> }))} />
       </div>
 
-      <div className="hidden items-center gap-2 whitespace-nowrap rounded-lg border border-white/[0.06] px-2.5 py-1.5 text-[11.5px] text-fog-400 min-[1700px]:flex" title="All model services operational">
-        <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-50" /><span className="relative h-2 w-2 rounded-full bg-mint" /></span>
-        <Activity className="h-3.5 w-3.5" /> Models nominal
+      <div className="hidden items-center gap-2 whitespace-nowrap rounded-lg border border-white/[0.06] px-2.5 py-1.5 text-[11.5px] text-fog-400 min-[1700px]:flex"
+        title={`NOAA ONI ${ONI_LABEL}: ${ONI.latest.value.toFixed(2)}°C${WEATHER ? ` · district weather to ${WEATHER.windowEnd} (NASA POWER)` : ' · district weather not fetched'}`}>
+        <span className={cn('h-2 w-2 rounded-full', WEATHER ? 'bg-mint' : 'bg-amber')} />
+        <Activity className="h-3.5 w-3.5" /> {WEATHER ? `Data to ${WEATHER.windowEnd}` : `ONI ${ONI_LABEL}`}
       </div>
 
       <div ref={notifRef} className="relative">
@@ -77,7 +79,7 @@ export function Topbar({ route, onMenu }: { route: RouteId; onMenu: () => void }
         </button>
         <AnimatePresence>{notifOpen && <NotificationCenter onClose={() => setNotifOpen(false)} />}</AnimatePresence>
       </div>
-      <button className="hidden h-9 items-center gap-2 rounded-lg pl-1 pr-2 hover:bg-white/[0.04] sm:flex" title="Goutham · Hydris" aria-label="Profile" onClick={() => toast({ tone: 'info', title: 'Signed in as Goutham', body: 'District Analyst · Hydris pilot workspace' })}>
+      <button className="hidden h-9 items-center gap-2 rounded-lg pl-1 pr-2 hover:bg-white/[0.04] sm:flex" title="Goutham · Hydris" aria-label="Profile" onClick={() => toast({ tone: 'info', title: 'Signed in as Goutham', body: 'Prototype workspace' })}>
         <span className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-mint/80 to-cyan/80 text-[11px] font-bold text-ink-950">G</span>
       </button>
     </header>

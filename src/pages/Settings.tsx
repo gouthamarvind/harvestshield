@@ -7,14 +7,16 @@ import { Slider } from '../components/ui/Slider';
 import { Segmented } from '../components/ui/Segmented';
 import { Badge } from '../components/ui/Badge';
 import { useToast } from '../state/toast';
+import { DATA_NOTE, DATA_NOTE_TITLE } from '../lib/dataNote';
+import { ONI, ONI_LABEL, WEATHER } from '../data/observed';
 
 const SOURCES = [
-  { n: 'NOAA CPC · Oceanic Niño Index', s: 'Planned', d: 'Monthly ENSO observations' },
-  { n: 'IMD gridded rainfall (0.25°)', s: 'Planned', d: 'Daily rainfall & anomalies' },
-  { n: 'ERA5 reanalysis temperature', s: 'Planned', d: 'Temperature anomalies' },
+  { n: 'NOAA CPC · Oceanic Niño Index', s: 'Active', d: `Monthly ENSO observations · latest ${ONI_LABEL} (${ONI.latest.value.toFixed(2)}°C) · as of ${ONI.asOf}` },
+  { n: 'NASA POWER · daily rainfall & temperature', s: WEATHER ? 'Active' : 'Not fetched', d: WEATHER ? `37 district points · ${WEATHER.windowStart} → ${WEATHER.windowEnd} vs 2001–2020 normals` : 'Run `npm run fetch:climate` to load district weather' },
+  { n: 'IMD gridded rainfall (0.25°)', s: 'Planned', d: 'Official Indian rainfall product' },
   { n: 'TN WRD reservoir bulletins', s: 'Planned', d: 'Storage levels' },
   { n: 'DES district crop statistics', s: 'Planned', d: 'Area, production, yield history' },
-  { n: 'HarvestShield seeded demo data', s: 'Active', d: 'Deterministic prototype scenarios' },
+  { n: 'Illustrative seed data', s: 'Active', d: 'Crop mix, reservoirs, population, what-if scenarios' },
 ];
 
 export default function Settings() {
@@ -29,7 +31,7 @@ export default function Settings() {
         actions={<Badge tone="amber" dot>Prototype mode</Badge>} />
       <div className="mb-4 flex items-start gap-3 rounded-2xl border border-amber/25 bg-amber/[0.06] p-4">
         <FlaskConical className="mt-0.5 h-5 w-5 shrink-0 text-amber" />
-        <div><div className="text-[14px] font-semibold text-amber">Prototype mode is on</div><div className="mt-0.5 text-[12.5px] leading-relaxed text-fog-400">Prototype scenario — values are illustrative. Production deployment would use ENSO observations, seasonal forecasts, historical crop yield data, water availability, soil/geospatial data and validated agronomic models.</div></div>
+        <div><div className="text-[14px] font-semibold text-amber">{DATA_NOTE_TITLE}</div><div className="mt-0.5 text-[12.5px] leading-relaxed text-fog-400">{DATA_NOTE}</div></div>
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
         <Panel eyebrow={<span className="flex items-center gap-1.5"><Database className="h-3 w-3" />Data sources</span>} title="Connectors">
@@ -45,7 +47,7 @@ export default function Settings() {
         </Panel>
         <Panel eyebrow={<span className="flex items-center gap-1.5"><Cpu className="h-3 w-3" />Model configuration</span>} title="Risk engine">
           <div className="space-y-3 text-[13px]">
-            {[['Risk model', 'Heuristic v0.3 (transparent, additive)'], ['Optimiser', 'Exhaustive search · ≤4 levers · ≥50% staple retained'], ['Adoption assumption', '62% within season'], ['Yield-loss ceiling', '45% at risk = 100'], ['Spatial unit', 'District (37) · pilot network 18,770 ha']].map(([k, v]) => (
+            {[['Risk model', 'Heuristic v0.3 (transparent, additive)'], ['Optimiser', 'Exhaustive search · ≤4 levers · ≥50% staple retained'], ['Adoption assumption', '62% within season'], ['Yield-loss ceiling', '45% at risk = 100'], ['Spatial unit', 'District (37) · modelled area 18,770 ha']].map(([k, v]) => (
               <div key={k} className="flex justify-between gap-4 border-b border-white/[0.04] pb-2.5"><span className="text-fog-500">{k}</span><span className="text-right text-fog-100">{v}</span></div>
             ))}
             <div className="text-[11.5px] text-fog-600">Production path: replace with calibrated crop models (e.g. DSSAT/APSIM emulators) validated against historical district yields.</div>

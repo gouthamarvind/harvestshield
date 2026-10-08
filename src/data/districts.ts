@@ -20,7 +20,7 @@ export interface District {
   rain: number;
   /** Population, lakh. */
   populationLakh: number;
-  /** Area enrolled in the HarvestShield pilot monitoring network, ha. */
+  /** Area enrolled in the modelled network (illustrative), ha. */
   monitoredHa: number;
   /** Socio-economic vulnerability index (0–1). */
   vulnerability: number;

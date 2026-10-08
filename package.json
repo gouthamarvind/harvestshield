@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "build:single": "vite build --mode single",
     "preview": "vite preview",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "fetch:climate": "node scripts/fetch-climate.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.11.17",

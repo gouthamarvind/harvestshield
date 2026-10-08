@@ -6,6 +6,7 @@ import { CROPS, type CropId } from '../data/crops';
 import type { ScenarioParams } from '../data/scenarios';
 import type { District } from '../data/districts';
 import { clamp } from '../lib/format';
+import { localize } from './localize';
 import { cropRisk, blendFactors, type Exposure, type Factor, NEUTRAL_EXPOSURE } from './risk';
 
 export interface Plan {
@@ -45,8 +46,8 @@ export const NORMAL: ScenarioParams = { enso: 0, rainfall: 0, temperature: 0, wa
 
 const PROTECT_BOOST = 12;
 
-export function evaluatePlan(p: ScenarioParams, plan: Plan, areaHa: number, d?: District): PlanOutcome {
-  const exp: Exposure = d ? { irrigation: d.irrigation, coastal: d.coastal, heat: d.heat, rain: d.rain } : NEUTRAL_EXPOSURE;
+export function evaluatePlan(p0: ScenarioParams, plan: Plan, areaHa: number, d?: District): PlanOutcome {
+  const { p, exp }: { p: ScenarioParams; exp: Exposure } = d ? localize(p0, d) : { p: p0, exp: NEUTRAL_EXPOSURE };
   const s = plan.crop === plan.altCrop ? 0 : clamp(plan.diversify, 0, 1);
   const awdMult = (c: CropId) => (plan.awd ? (c === 'rice' ? 0.78 : 0.9) : 1);
 

@@ -8,7 +8,8 @@ import { ClimateSignalChart } from '../components/ClimateSignalChart';
 import { TamilNaduMap, MapLegend } from '../components/map/TamilNaduMap';
 import { AnimatedNumber } from '../components/ui/AnimatedNumber';
 import { Badge } from '../components/ui/Badge';
-import { ANALOGS, ANALOG_MONTHS, analogSimilarity, currentTrajectory, forecastTrajectory, getOutlook } from '../services/climateService';
+import { ANALOGS, ANALOG_MONTHS, NOW_INDEX, CURRENT_YEAR, analogSimilarity, currentTrajectory, getOutlook } from '../services/climateService';
+import { ONI, ONI_LABEL, WEATHER, WEATHER_WINDOW_LABEL } from '../data/observed';
 import { ensoLabel } from '../data/scenarios';
 import { fmtSigned } from '../lib/format';
 import { useCountUp } from '../lib/useCountUp';
@@ -17,19 +18,19 @@ import { cn } from '../lib/cn';
 const ANALOG_COLORS: Record<string, string> = { '1997': '#A78BFA', '2009': '#7C9CFF', '2015': '#FF7A3D', '2023': '#4FE3F0' };
 
 export default function Climate() {
-  const { params, risks } = useApp();
+  const { params, risks, presetId } = useApp();
   const sims = useMemo(() => analogSimilarity(params), [params]);
   const [shown, setShown] = useState<Record<string, boolean>>({ '1997': true, '2009': false, '2015': true, '2023': true });
-  const cur = currentTrajectory(params), fc = forecastTrajectory(params);
-  const histData = ANALOG_MONTHS.map((m, i) => ({ m, current: cur[i], forecast: fc[i], ...Object.fromEntries(ANALOGS.map((a) => [a.id, a.oni[i]])) }));
+  const cur = currentTrajectory();
+  const histData = ANALOG_MONTHS.map((m, i) => ({ m, current: cur[i], ...Object.fromEntries(ANALOGS.map((a) => [a.id, a.oni[i]])) }));
   const outlook = useMemo(() => getOutlook(params).map((o) => ({ ...o, rainErr: [o.rainfall - o.rainLo, o.rainHi - o.rainfall] })), [params]);
   const rainValues = Object.fromEntries(risks.map((r) => [r.district.id, Math.max(0, Math.min(100, -r.rainfallAnomaly * 2.6))]));
 
   return (
     <div>
-      <PageHeader eyebrow="Climate intelligence" title="ENSO & regional climate signal" subtitle="Track the El Niño signal, compare it with historical events, and read the seasonal outlook that drives every downstream risk estimate." />
+      <PageHeader eyebrow="Climate intelligence" title="ENSO & regional climate signal" subtitle={`Real El Niño observations from NOAA (latest: ${ONI_LABEL}, ONI ${ONI.latest.value >= 0 ? '+' : ''}${ONI.latest.value.toFixed(2)}°C)${WEATHER ? ` and NASA POWER district weather for ${WEATHER_WINDOW_LABEL}` : ''}, compared with past El Niño years.`} />
       <div className="grid gap-4 lg:grid-cols-[340px_1fr]">
-        <Panel eyebrow="El Niño strength" title="Niño-3.4 anomaly">
+        <Panel eyebrow={presetId === 'observed' ? `El Niño strength · NOAA ${ONI_LABEL}` : 'El Niño strength · scenario value'} title="Niño-3.4 anomaly (ONI)">
           <EnsoGauge value={params.enso} />
           <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             {[['Rainfall', fmtSigned(params.rainfall, 0, '%'), '#4FE3F0'], ['Temp.', fmtSigned(params.temperature, 1, '°'), '#FF7A3D'], ['Storage', `${params.water}%`, '#7C9CFF']].map(([k, v, c]) => (
@@ -37,7 +38,8 @@ export default function Climate() {
             ))}
           </div>
         </Panel>
-        <Panel eyebrow="Analog years" title={<>Current pattern is most similar to <span className="text-mint">{sims[0].analog.label}</span></>}>
+        <Panel eyebrow="Analog years" title={<>{CURRENT_YEAR} so far is most similar to <span className="text-mint">{sims[0].analog.label}</span></>}
+          actions={<span className="text-[11px] text-fog-500">Similarity of observed ONI, {ANALOG_MONTHS[0]}–{ANALOG_MONTHS[NOW_INDEX]}</span>}>
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {sims.map((s, i) => (
               <motion.button key={s.analog.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}
@@ -46,7 +48,7 @@ export default function Climate() {
                 <div className="flex items-center justify-between"><span className="text-[15px] font-semibold">{s.analog.label}</span>{i === 0 ? <Badge tone="mint">Best match</Badge> : <span className="h-2 w-2 rounded-full" style={{ background: ANALOG_COLORS[s.analog.id] }} />}</div>
                 <div className="num mt-2 text-[26px] font-semibold" style={{ color: i === 0 ? '#3DF58A' : '#E8F3EC' }}><AnimatedNumber value={s.similarity} />%</div>
                 <div className="mt-1 h-1 overflow-hidden rounded-full bg-white/[0.05]"><motion.div className="h-full rounded-full" style={{ background: ANALOG_COLORS[s.analog.id] }} initial={{ width: 0 }} animate={{ width: `${s.similarity}%` }} transition={{ duration: 0.8 }} /></div>
-                <div className="mt-2 text-[11px] text-fog-500">Peak {s.analog.peak.toFixed(1)}°C · rain {s.analog.rainfall}%</div>
+                <div className="mt-2 text-[11px] text-fog-500">Peak ONI {s.analog.peak.toFixed(2)}°C</div>
                 <div className="mt-0.5 text-[11px] text-fog-400">{s.analog.impact}</div>
                 <div className="mt-2 text-[10.5px] text-fog-600">{shown[s.analog.id] ? 'Shown on chart · click to hide' : 'Click to compare'}</div>
               </motion.button>
@@ -56,7 +58,7 @@ export default function Climate() {
       </div>
 
       <div className="mt-4 grid gap-4 xl:grid-cols-2">
-        <Panel eyebrow="Historical comparison" title="Current ENSO trajectory vs past El Niño years" delay={0.05}>
+        <Panel eyebrow="Historical comparison" title={`${CURRENT_YEAR} ONI vs past El Niño years (NOAA)`} delay={0.05}>
           <div className="h-[290px]">
             <ResponsiveContainer>
               <LineChart data={histData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
@@ -64,22 +66,21 @@ export default function Climate() {
                 <XAxis dataKey="m" tickLine={false} axisLine={false} />
                 <YAxis tickLine={false} axisLine={false} domain={[-1, 3]} tickFormatter={(v) => `${v}°`} />
                 <ReferenceLine y={0.5} stroke="#F5B83D" strokeOpacity={0.35} strokeDasharray="3 3" label={{ value: 'El Niño threshold', fill: '#F5B83D', fontSize: 10, position: 'insideBottomRight' }} />
-                <ReferenceLine x="Oct" stroke="#3DF58A" strokeOpacity={0.5} strokeDasharray="2 3" label={{ value: 'NOW', fill: '#3DF58A', fontSize: 10, position: 'insideTopLeft' }} />
+                <ReferenceLine x={ANALOG_MONTHS[NOW_INDEX]} stroke="#3DF58A" strokeOpacity={0.5} strokeDasharray="2 3" label={{ value: 'LATEST', fill: '#3DF58A', fontSize: 10, position: 'insideTopLeft' }} />
                 <Tooltip content={<ChartTooltip unit={{}} />} />
                 {ANALOGS.filter((a) => shown[a.id]).map((a) => <Line key={a.id} dataKey={a.id} name={a.label} stroke={ANALOG_COLORS[a.id]} strokeWidth={1.4} strokeOpacity={0.75} dot={false} />)}
-                <Line dataKey="current" name="Current (observed)" stroke="#3DF58A" strokeWidth={3} dot={{ r: 2.5, fill: '#3DF58A' }} connectNulls={false} />
-                <Line dataKey="forecast" name="Current (forecast)" stroke="#3DF58A" strokeWidth={2} strokeDasharray="5 4" dot={false} />
+                <Line dataKey="current" name={`${CURRENT_YEAR} (observed)`} stroke="#3DF58A" strokeWidth={3} dot={{ r: 2.5, fill: '#3DF58A' }} connectNulls={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>
         </Panel>
-        <Panel eyebrow="ENSO index timeline" title="Observed + forecast anomalies" delay={0.1}>
+        <Panel eyebrow="Observed timeline" title={WEATHER ? 'ONI, Tamil Nadu rainfall & temperature anomalies' : 'ONI timeline (district weather not fetched)'} delay={0.1}>
           <ClimateSignalChart height={250} />
         </Panel>
       </div>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2 2xl:grid-cols-4">
-        <Panel eyebrow="Forecast · Oct–Mar" title="Rainfall anomaly outlook" delay={0.1}>
+        <Panel eyebrow="Scenario projection · not a forecast" title="Rainfall anomaly outlook" delay={0.1}>
           <div className="h-[200px]">
             <ResponsiveContainer>
               <ComposedChart data={outlook} margin={{ top: 8, right: 4, left: -24, bottom: 0 }}>
@@ -96,7 +97,7 @@ export default function Climate() {
             </ResponsiveContainer>
           </div>
         </Panel>
-        <Panel eyebrow="Forecast · Oct–Mar" title="Temperature anomaly outlook" delay={0.15}>
+        <Panel eyebrow="Scenario projection · not a forecast" title="Temperature anomaly outlook" delay={0.15}>
           <div className="h-[200px]">
             <ResponsiveContainer>
               <AreaChart data={outlook} margin={{ top: 8, right: 4, left: -24, bottom: 0 }}>
@@ -110,7 +111,7 @@ export default function Climate() {
             </ResponsiveContainer>
           </div>
         </Panel>
-        <Panel eyebrow="Forecast · Oct–Mar" title="Water stress outlook" delay={0.2}>
+        <Panel eyebrow="Scenario projection · not a forecast" title="Water stress outlook" delay={0.2}>
           <div className="h-[200px]">
             <ResponsiveContainer>
               <AreaChart data={outlook} margin={{ top: 8, right: 4, left: -24, bottom: 0 }}>
@@ -125,7 +126,7 @@ export default function Climate() {
             </ResponsiveContainer>
           </div>
         </Panel>
-        <Panel eyebrow="Regional" title="Rainfall deficit by district" delay={0.25} bodyClass="p-0">
+        <Panel eyebrow="Regional" title={WEATHER ? 'Observed rainfall deficit by district' : 'Rainfall deficit by district (scenario)'} delay={0.25} bodyClass="p-0">
           <div className="relative h-[240px]">
             <TamilNaduMap values={rainValues} palette="rain" interactive={false} />
             <div className="absolute bottom-2 left-3 scale-90 origin-bottom-left"><MapLegend palette="rain" label="Deficit" min="Normal" max="Severe" /></div>

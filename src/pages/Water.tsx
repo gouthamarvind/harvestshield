@@ -41,7 +41,7 @@ export default function Water() {
       </div>
 
       <div className="mt-4 grid gap-4 xl:grid-cols-[1fr_1.3fr]">
-        <Panel eyebrow="Reservoir storage" title="Major reservoirs · % of capacity" delay={0.05}>
+        <Panel eyebrow="Reservoir storage · assumed" title="Major reservoirs · % of capacity" delay={0.05}>
           <div className="space-y-3.5">
             {res.map((r, i) => (
               <div key={r.name}>
@@ -54,7 +54,7 @@ export default function Water() {
               </div>
             ))}
           </div>
-          <div className="mt-3 text-[11px] text-fog-600">Marker = typical storage for this date. Prototype values scaled from scenario water availability.</div>
+          <div className="mt-3 text-[11px] text-fog-600">Not live: no reservoir feed is connected yet. Values are scaled from the water-availability setting. Marker = typical storage for this date.</div>
         </Panel>
 
         <Panel eyebrow="Allocation simulator" title="Drag to reallocate available water" delay={0.1}

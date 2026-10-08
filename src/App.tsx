@@ -1,3 +1,4 @@
+import { DATA_NOTE, DATA_NOTE_TITLE } from './lib/dataNote';
 import { AnimatePresence, motion } from 'framer-motion';
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useHashRoute, type RouteId } from './lib/router';
@@ -50,10 +51,10 @@ function Shell({ route }: { route: RouteId }) {
       if (Date.now() - chord.current < 900 && CHORDS[k]) { app.navigate(CHORDS[k]); chord.current = 0; return; }
       if (k === 'g') { chord.current = Date.now(); return; }
       if (k === '[') setCollapsed((c) => !c);
-      if (/^[1-5]$/.test(k) && !el.closest('[role="dialog"]')) {
+      if (/^[1-6]$/.test(k) && !el.closest('[role="dialog"]')) {
         const p = PRESETS[Number(k) - 1];
         app.setPreset(p.id);
-        toast({ tone: 'success', title: `Scenario applied · ${p.name}`, body: 'Shortcut 1–5 switches demo scenarios.' });
+        toast({ tone: 'success', title: `Scenario applied · ${p.name}`, body: 'Shortcut 1 = observed data, 2–6 = what-if scenarios.' });
       }
     };
     window.addEventListener('keydown', onKey);
@@ -74,7 +75,7 @@ function Shell({ route }: { route: RouteId }) {
               </motion.div>
             </AnimatePresence>
             <footer className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.05] pt-5 text-[11.5px] leading-relaxed text-fog-600">
-              <p className="max-w-3xl"><span className="font-semibold text-fog-500">Prototype scenario — values are illustrative.</span> Production deployment would use ENSO observations, seasonal forecasts, historical crop yield data, water availability, soil/geospatial data and validated agronomic models.</p>
+              <p className="max-w-3xl"><span className="font-semibold text-fog-500">{DATA_NOTE_TITLE}.</span> {DATA_NOTE}</p>
               <p>HarvestShield · VELSATHON’26 · SDG 2 Zero Hunger · SDG 13 Climate Action</p>
             </footer>
           </div>

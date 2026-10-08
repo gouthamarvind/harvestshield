@@ -53,7 +53,7 @@ export function Sidebar({ route, collapsed, onToggle, mobileOpen, onCloseMobile 
         <div className="shrink-0 border-t border-white/[0.05] p-2.5">
           <div className={cn('mb-2 rounded-lg border border-amber/20 bg-amber/[0.06] px-3 py-2', collapsed && 'lg:hidden')}>
             <div className="flex items-center gap-1.5 text-[11px] font-semibold text-amber"><ShieldCheck className="h-3.5 w-3.5" /> Prototype mode</div>
-            <div className="mt-0.5 text-[10.5px] leading-snug text-fog-500">Illustrative scenario data. Not a validated forecast.</div>
+            <div className="mt-0.5 text-[10.5px] leading-snug text-fog-500">Real ENSO & weather; farm data illustrative. Not a validated forecast.</div>
           </div>
           <div className={cn('flex items-center gap-2', collapsed && 'lg:justify-center')}>
             <div className={cn('flex flex-1 items-center gap-2 px-1', collapsed && 'lg:hidden')}>

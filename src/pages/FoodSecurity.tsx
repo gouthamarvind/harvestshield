@@ -11,7 +11,7 @@ import { Sankey, type SLink, type SNode } from '../components/Sankey';
 import { ChartTooltip } from '../components/ui/ChartTooltip';
 import { CROPS, CROP_IDS, type CropId } from '../data/crops';
 import { cropRisk } from '../model/risk';
-import { exposureOf } from '../services/cropRiskService';
+import { localize } from '../model/localize';
 import { NORMAL } from '../model/plan';
 import { fmtInt } from '../lib/format';
 import { useToast } from '../state/toast';
@@ -29,7 +29,7 @@ export default function FoodSecurity() {
     for (const r of risks) for (const c of CROP_IDS) {
       const share = r.district.mix[c];
       if (share <= 0) continue;
-      const now = cropRisk(params, c, exposureOf(r.district)), nor = cropRisk(NORMAL, c, exposureOf(r.district));
+      const L = localize(params, r.district); const now = cropRisk(L.p, c, L.exp), nor = cropRisk(NORMAL, c, L.exp);
       const ha = r.district.monitoredHa * share;
       const loss = Math.max(0, ha * (nor.yieldTHa - now.yieldTHa));
       cropLoss[c] += loss; cropNormal[c] += ha * nor.yieldTHa;
@@ -76,7 +76,7 @@ export default function FoodSecurity() {
       <PageHeader eyebrow="SDG 2 · Zero Hunger" title="Food Security" subtitle="How climate-driven crop loss propagates into food supply and household exposure — and which early actions keep it from becoming a crisis."
         actions={<Badge tone="neutral">SDG 2 · Target 2.4 resilient agriculture</Badge>} />
       <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-        <Kpi label="Potential production loss" accent="#FF7A3D" icon={<Package className="h-3 w-3" />} value={<><AnimatedNumber value={food.productionLossT} /><span className="ml-1 text-[14px] text-fog-500">t</span></>} sub="pilot network, vs normal season" />
+        <Kpi label="Potential production loss" accent="#FF7A3D" icon={<Package className="h-3 w-3" />} value={<><AnimatedNumber value={food.productionLossT} /><span className="ml-1 text-[14px] text-fog-500">t</span></>} sub="modelled area, vs normal season" />
         <Kpi label="Food supply exposure" accent="#F5B83D" icon={<Percent className="h-3 w-3" />} delay={0.05} value={<><AnimatedNumber value={food.supplyExposurePct} decimals={1} /><span className="text-[16px] text-fog-500">%</span></>} sub="of local staple supply" />
         <Kpi label="Reserve coverage" accent={food.reserveDays < 30 ? '#FF7A3D' : '#3DF58A'} icon={<CalendarClock className="h-3 w-3" />} delay={0.1} value={<><AnimatedNumber value={food.reserveDays} /><span className="ml-1 text-[14px] text-fog-500">days</span></>} sub="PDS buffer in exposed districts" />
         <Kpi label="Vulnerable population" accent="#FF4D5E" icon={<Users className="h-3 w-3" />} delay={0.15} value={<>~<AnimatedNumber value={Math.round(food.vulnerablePopulation / 1000) * 1000} /></>} sub="people in high-exposure households" />
@@ -113,7 +113,7 @@ export default function FoodSecurity() {
       </div>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
-        <Panel eyebrow="Expected crop production" title="Normal season vs current scenario (pilot network, t)" delay={0.2}>
+        <Panel eyebrow="Expected crop production" title="Normal season vs current scenario (modelled area, t)" delay={0.2}>
           <div className="h-[260px]">
             <ResponsiveContainer>
               <BarChart data={byCrop} margin={{ top: 8, right: 8, left: -10, bottom: 0 }} barGap={4}>

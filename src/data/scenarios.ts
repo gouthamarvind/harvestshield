@@ -1,4 +1,10 @@
-/** Scenario presets drive every view. Values are illustrative demo inputs, not forecasts. */
+import { HAS_WEATHER, ONI, ONI_LABEL, WEATHER } from './observed';
+
+/**
+ * Scenario presets drive every view.
+ * 'observed' is built from real data (NOAA ONI + NASA POWER district weather when fetched).
+ * The other presets are hypothetical what-if scenarios for comparison.
+ */
 export interface ScenarioParams {
   /** Oceanic Niño Index style anomaly (°C). */
   enso: number;
@@ -8,9 +14,11 @@ export interface ScenarioParams {
   temperature: number;
   /** Reservoir / irrigation water availability, % of normal storage. */
   water: number;
+  /** Observed per-district anomalies; when present they replace the state-wide rainfall/temperature for that district. */
+  local?: Record<string, { rainfall: number; temperature: number }>;
 }
 
-export type PresetId = 'normal' | 'moderate' | 'strong' | 'extreme-water' | 'recovery';
+export type PresetId = 'observed' | 'normal' | 'moderate' | 'strong' | 'extreme-water' | 'recovery';
 
 export interface ScenarioPreset {
   id: PresetId;
@@ -18,9 +26,38 @@ export interface ScenarioPreset {
   short: string;
   description: string;
   params: ScenarioParams;
+  /** True for the preset built from real observations. */
+  observed?: boolean;
 }
 
+/** Reservoir storage is not connected to a live feed yet; this value is an explicit assumption. */
+export const ASSUMED_WATER = 60;
+
+const observedLocal = WEATHER
+  ? Object.fromEntries(Object.entries(WEATHER.districts)
+      .filter(([, d]) => d.rainAnomPct != null && d.tempAnomC != null)
+      .map(([id, d]) => [id, { rainfall: d.rainAnomPct!, temperature: d.tempAnomC! }]))
+  : undefined;
+
+export const OBSERVED_PRESET: ScenarioPreset = {
+  id: 'observed',
+  name: 'Observed now',
+  short: 'Observed',
+  observed: true,
+  description: HAS_WEATHER
+    ? `Real data: ONI ${ONI.latest.value >= 0 ? '+' : ''}${ONI.latest.value.toFixed(2)} (${ONI_LABEL}), district rainfall & temperature to ${WEATHER!.windowEnd}.`
+    : `Real ONI ${ONI.latest.value >= 0 ? '+' : ''}${ONI.latest.value.toFixed(2)} (${ONI_LABEL}). District weather not fetched yet.`,
+  params: {
+    enso: ONI.latest.value,
+    rainfall: WEATHER ? WEATHER.state.rainAnomPct : 0,
+    temperature: WEATHER ? WEATHER.state.tempAnomC : 0,
+    water: ASSUMED_WATER,
+    local: observedLocal,
+  },
+};
+
 export const PRESETS: ScenarioPreset[] = [
+  OBSERVED_PRESET,
   { id: 'normal', name: 'Normal Conditions', short: 'Normal', description: 'ENSO-neutral season with near-average monsoon.', params: { enso: 0.2, rainfall: 3, temperature: 0.3, water: 84 } },
   { id: 'moderate', name: 'Moderate El Niño', short: 'Moderate', description: 'Weak-to-moderate warm phase; modest monsoon deficit.', params: { enso: 1.1, rainfall: -9, temperature: 0.8, water: 63 } },
   { id: 'strong', name: 'Strong El Niño', short: 'Strong', description: 'Strong warm phase similar to 2015–16; significant rainfall deficit.', params: { enso: 1.7, rainfall: -18, temperature: 1.4, water: 45 } },

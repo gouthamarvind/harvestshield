@@ -1,3 +1,4 @@
+import { ONI_LABEL, WEATHER } from '../data/observed';
 import { motion } from 'framer-motion';
 import { ArrowRight, CloudRain, Thermometer, FlaskConical, Droplets, Wheat, ShieldCheck, AlertOctagon, Package, Activity, ChevronRight } from 'lucide-react';
 import { useApp } from '../state/AppState';
@@ -16,6 +17,7 @@ const waterLevel = (v: number) => (v >= 70 ? 'CRITICAL' : v >= 50 ? 'HIGH' : v >
 export default function Overview() {
   const { params, presetId, summary, food, risks, openDistrict, navigate, simulateDistrict } = useApp();
   const preset = presetById(presetId);
+  const noWx = presetId === 'observed' && !WEATHER;
   const top = risks.slice(0, 5);
   const enso = ensoLabel(params.enso);
   const wl = waterLevel(summary.waterStress);
@@ -28,7 +30,7 @@ export default function Overview() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_300px_at_85%_0%,rgba(61,245,138,0.12),transparent_70%)]" />
         <div className="relative grid gap-6 p-6 md:p-8 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="eyebrow flex items-center gap-2"><span className="relative flex h-2 w-2"><span className="absolute h-full w-full animate-ping rounded-full bg-mint opacity-60" /><span className="relative h-2 w-2 rounded-full bg-mint" /></span>Live climate briefing · Tamil Nadu · {preset.name}</div>
+            <div className="eyebrow flex items-center gap-2"><span className="relative flex h-2 w-2"><span className="absolute h-full w-full animate-ping rounded-full bg-mint opacity-60" /><span className="relative h-2 w-2 rounded-full bg-mint" /></span>Climate briefing · Tamil Nadu · {preset.name}</div>
             <h1 className="mt-3 max-w-xl text-[30px] font-semibold leading-[1.1] tracking-[-0.025em] md:text-[40px]">
               El Niño is changing the <span className="bg-gradient-to-r from-mint via-lime to-cyan bg-clip-text text-transparent">agricultural risk landscape.</span>
             </h1>
@@ -49,7 +51,7 @@ export default function Overview() {
           <div className="glass self-center rounded-2xl p-5">
             <div className="flex items-start justify-between">
               <div>
-                <div className="eyebrow">ENSO status · Niño-3.4</div>
+                <div className="eyebrow">{presetId === 'observed' ? `ENSO · NOAA ONI ${ONI_LABEL}` : 'ENSO · scenario value'}</div>
                 <div className="mt-2 flex items-baseline gap-2">
                   <span className="num text-[56px] font-semibold leading-none tracking-tight text-amber" style={{ textShadow: '0 0 30px rgba(245,184,61,0.35)' }}><AnimatedNumber value={params.enso} decimals={1} /></span>
                   <span className="text-[13px] text-fog-500">°C anomaly</span>
@@ -65,8 +67,8 @@ export default function Overview() {
             <div className="mt-1.5 flex justify-between text-[10px] text-fog-600"><span>La Niña</span><span>Neutral</span><span>Moderate</span><span>Strong</span><span>Very strong</span></div>
             <div className="divider my-4" />
             <div className="grid grid-cols-2 gap-3">
-              <div><div className="flex items-center gap-1.5 text-[11px] text-fog-500"><CloudRain className="h-3.5 w-3.5 text-cyan" />Rainfall anomaly</div><div className="num mt-1 text-[22px] font-semibold text-cyan"><AnimatedNumber value={params.rainfall} format={(v) => fmtSigned(v, 0, '%')} /></div></div>
-              <div><div className="flex items-center gap-1.5 text-[11px] text-fog-500"><Thermometer className="h-3.5 w-3.5 text-ember" />Temperature</div><div className="num mt-1 text-[22px] font-semibold text-ember"><AnimatedNumber value={params.temperature} format={(v) => fmtSigned(v, 1, '°C')} /></div></div>
+              <div><div className="flex items-center gap-1.5 text-[11px] text-fog-500"><CloudRain className="h-3.5 w-3.5 text-cyan" />Rainfall anomaly</div><div className="num mt-1 text-[22px] font-semibold text-cyan">{noWx ? <span className="text-[14px] text-fog-500">not fetched</span> : <AnimatedNumber value={params.rainfall} format={(v) => fmtSigned(v, 0, '%')} />}</div>{presetId === 'observed' && WEATHER && <div className="text-[10.5px] text-fog-500">since {WEATHER.windowStart.slice(5)} · NASA POWER</div>}</div>
+              <div><div className="flex items-center gap-1.5 text-[11px] text-fog-500"><Thermometer className="h-3.5 w-3.5 text-ember" />Temperature</div><div className="num mt-1 text-[22px] font-semibold text-ember">{noWx ? <span className="text-[14px] text-fog-500">not fetched</span> : <AnimatedNumber value={params.temperature} format={(v) => fmtSigned(v, 1, '°C')} />}</div></div>
             </div>
           </div>
         </div>
@@ -84,8 +86,8 @@ export default function Overview() {
           value={<span className="text-mint glow-text"><AnimatedNumber value={summary.preventableRisk} /><span className="text-[16px] text-mint/60">%</span></span>} sub="with modelled interventions" />
         <Kpi label="Critical districts" accent="#FF4D5E" delay={0.25} icon={<AlertOctagon className="h-3 w-3" />} onClick={() => navigate('risk-map')}
           value={<AnimatedNumber value={summary.criticalDistricts} />} sub="risk ≥ 70% threshold" />
-        <Kpi label="Output at risk" accent="#F5B83D" delay={0.3} icon={<Package className="h-3 w-3" />} info="Expected shortfall vs. normal season across the pilot monitoring network." onClick={() => navigate('food')}
-          value={<><AnimatedNumber value={summary.productionAtRiskT} /><span className="ml-1 text-[14px] text-fog-500">t</span></>} sub={<>across <span className="num">{fmtInt(summary.monitoredHa)}</span> ha monitored</>} />
+        <Kpi label="Output at risk" accent="#F5B83D" delay={0.3} icon={<Package className="h-3 w-3" />} info="Expected shortfall vs. normal season across the modelled network (illustrative)." onClick={() => navigate('food')}
+          value={<><AnimatedNumber value={summary.productionAtRiskT} /><span className="ml-1 text-[14px] text-fog-500">t</span></>} sub={<>across <span className="num">{fmtInt(summary.monitoredHa)}</span> ha modelled</>} />
       </div>
 
       {/* Causal chain */}
@@ -94,7 +96,7 @@ export default function Overview() {
       </Panel>
 
       <div className="grid gap-4 xl:grid-cols-3">
-        <Panel className="xl:col-span-2" eyebrow="Live climate signal" title="Rainfall, temperature & ENSO anomalies" delay={0.15}
+        <Panel className="xl:col-span-2" eyebrow="Observed climate signal" title="Rainfall, temperature & ENSO anomalies" delay={0.15}
           actions={<button className="btn-subtle h-8 text-[12px]" onClick={() => navigate('climate')}>Climate intelligence <ArrowRight className="h-3.5 w-3.5" /></button>}>
           <ClimateSignalChart />
         </Panel>
@@ -125,11 +127,12 @@ export default function Overview() {
 }
 
 function ImpactChain() {
-  const { params, summary, food, risks } = useApp();
+  const { params, summary, food, risks, presetId } = useApp();
+  const noWx = presetId === 'observed' && !WEATHER;
   const top = risks[0];
   const steps = [
     { k: 'El Niño', v: `${params.enso.toFixed(1)}°C`, s: ensoLabel(params.enso).toLowerCase(), c: '#F5B83D' },
-    { k: 'Climate anomaly', v: fmtSigned(params.rainfall, 0, '%'), s: `rain · ${fmtSigned(params.temperature, 1, '°C')}`, c: '#4FE3F0' },
+    { k: 'Climate anomaly', v: noWx ? 'n/a' : fmtSigned(params.rainfall, 0, '%'), s: noWx ? 'district weather not fetched' : `rain · ${fmtSigned(params.temperature, 1, '°C')}`, c: '#4FE3F0' },
     { k: 'Water stress', v: `${summary.waterStress.toFixed(0)}`, s: 'index / 100', c: '#7C9CFF' },
     { k: 'Crop vulnerability', v: `${top.score.toFixed(0)}%`, s: `${top.district.name} ${top.cropLabel.toLowerCase()}`, c: riskColor(top.score) },
     { k: 'Yield loss', v: `${fmtInt(summary.productionAtRiskT)} t`, s: 'production at risk', c: '#FF7A3D' },
